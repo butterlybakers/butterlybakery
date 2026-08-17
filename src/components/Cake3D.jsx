@@ -163,7 +163,7 @@ const DetailedPastryModel = ({ type }) => {
               <meshStandardMaterial color="#7a9159" roughness={0.1} metalness={0.1} />
             </mesh>
             {/* Pistachio Crumb Ring */}
-            <mesh position={[0, 0.42, 0]}>
+            <mesh position={[0, 0.42, 0]} rotation={[Math.PI / 2, 0, 0]}>
               <torusGeometry args={[1.1, 0.1, 16, 32]} />
               <meshStandardMaterial color="#556b2f" roughness={0.9} />
             </mesh>

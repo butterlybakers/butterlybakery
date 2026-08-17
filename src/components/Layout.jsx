@@ -138,9 +138,7 @@ const Layout = () => {
         </div>
       </div>
 
-      {/* Background Blobs */}
-      <div className="bg-blob blob-1"></div>
-      <div className="bg-blob blob-2"></div>
+      {/* Background Blobs Removed per user request */}
 
       {/* Header */}
       <header id="main-header" className={scrolled ? 'scrolled' : ''}>
@@ -149,28 +147,18 @@ const Layout = () => {
             <NavLink to="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               {/* Logo Image */}
               <img 
-                src="/assets/logo.png" 
+                src="/images/butterly-logo-main.png" 
                 alt="Butterly Bakery Logo" 
                 style={{ 
-                  height: scrolled ? '40px' : '80px', 
-                  transition: 'height 0.4s ease',
-                  objectFit: 'contain'
+                  height: scrolled ? '80px' : '150px', 
+                  transition: 'height 0.4s ease, transform 0.4s ease',
+                  objectFit: 'contain',
+                  marginTop: scrolled ? '0' : '10px',
+                  marginBottom: scrolled ? '0' : '25px',
+                  transform: scrolled ? 'scale(1.5)' : 'scale(2.5)',
+                  filter: 'brightness(1.3)'
                 }} 
-                onError={(e) => {
-                  // Fallback to SVG if image is missing
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
               />
-              {/* Fallback SVG if image is missing */}
-              <div style={{ display: 'none', height: scrolled ? '40px' : '80px', width: scrolled ? '40px' : '80px', justifyContent: 'center', alignItems: 'center' }}>
-                 <AnimatedButterfly style={{ width: '100%', height: '100%' }} />
-              </div>
-
-              {/* Bakery Name */}
-              <h2 style={{ fontFamily: 'Cinzel, serif', color: 'var(--secondary)', fontSize: scrolled ? '1.2rem' : '2rem', margin: 0, paddingTop: '5px', transition: 'font-size 0.4s ease' }}>
-                Butterly Bakery
-              </h2>
             </NavLink>
           </div>
           

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Cake3D from '../components/Cake3D';
 import TextReveal from '../components/TextReveal';
@@ -6,28 +6,41 @@ import MagneticButton from '../components/MagneticButton';
 import AnimatedButterfly from '../components/AnimatedButterfly';
 import QuickViewModal from '../components/QuickViewModal';
 import FlavorOracle from '../components/FlavorOracle';
+import GoogleReviews from '../components/GoogleReviews';
 
 import { useCart } from '../context/CartContext';
-
-const featuredProducts = [
-  { id: 'p1', name: 'Classic Tres Leches', price: 180, description: 'A light, airy sponge cake soaked in three kinds of milk. The ultimate melt-in-your-mouth experience.', image: '/images/tres_leches_1785271883022.png' },
-  { id: 'p2', name: 'Coffee Crunch', price: 160, description: 'A rich coffee infused pastry with a delightful crunchy texture.', image: '/images/truffle_cake_1785271864770.png' },
-  { id: 'p3', name: 'Korean Bun', price: 120, description: 'Soft, fluffy, and filled with creamy goodness.', image: '/images/cream_bun_1785271874235.png' },
-  { id: 'p4', name: 'Biscoff Brownie', price: 140, description: 'Fudgy brownie swirled with rich Biscoff spread.', image: '/images/macarons_1785271892400.png' },
-];
+import { menuCategories } from '../menuData';
 
 const Home = () => {
 
   const { addToCart } = useCart();
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
+
+  // Filter out categories that might have 0 products (just to be safe)
+  const validCategories = menuCategories.filter(cat => cat.products && cat.products.length > 0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentCategoryIndex((prevIndex) => (prevIndex + 1) % validCategories.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [validCategories.length]);
 
   const handleSurpriseMe = () => {
     const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=magic-wand-6214.mp3');
     audio.volume = 0.4;
     audio.play().catch(() => {});
-    const random = featuredProducts[Math.floor(Math.random() * featuredProducts.length)];
-    setSelectedProduct(random);
+    
+    // Pick a random category, then a random product from it
+    const randomCategory = validCategories[Math.floor(Math.random() * validCategories.length)];
+    const randomProduct = randomCategory.products[Math.floor(Math.random() * randomCategory.products.length)];
+    setSelectedProduct(randomProduct);
   };
+
+  // Select up to 4 products from the current category
+  const currentCategory = validCategories[currentCategoryIndex];
+  const featuredProducts = currentCategory ? currentCategory.products.slice(0, 4) : [];
 
   return (
     <>
@@ -69,6 +82,9 @@ const Home = () => {
       {/* Featured Products */}
       <section className="section-container" style={{ background: 'rgba(255,255,255,0.4)', borderRadius: '40px', marginBottom: '5rem', padding: '5rem 2rem' }}>
         <h2 className="section-title" data-aos="fade-up">Featured Delights</h2>
+        <h3 style={{ textAlign: 'center', color: 'var(--primary)', marginBottom: '3rem', fontSize: '1.5rem', fontWeight: 'bold' }} data-aos="fade-up">
+          {currentCategory ? currentCategory.categoryName : ''}
+        </h3>
         <div className="products-grid">
           {featuredProducts.map((product, i) => (
             <div key={product.id} className="product-card" data-aos="fade-up" data-aos-delay={i * 150} style={{ position: 'relative', overflow: 'hidden' }}>
@@ -97,27 +113,7 @@ const Home = () => {
 
       {/* Removed Flavor Oracle and Quality sections */}
 
-      {/* Reviews Section */}
-      <section className="section-container" style={{ marginBottom: '5rem' }}>
-        <h2 className="section-title" data-aos="fade-up">Loved by Bangalore</h2>
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }} data-aos="fade-up">
-          <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '2.5rem', color: 'var(--secondary)' }}>4.9 / 5.0</h3>
-          <p style={{ color: '#F5B041', fontSize: '1.5rem', letterSpacing: '5px' }}>★★★★★</p>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-          {[
-            { text: '"I ordered the Chocolate Truffle cake, and it was absolutely delicious! The little coconut crunch inside made it even more special."', author: 'Navita Kumari', delay: 100 },
-            { text: '"Korean bun is so soft and fluffy that I couldn\'t resist it. Quality and taste of the food were top-notch."', author: 'Vignesh Reddy', delay: 300 },
-            { text: '"It\'s a really nice bakery. And I highly recommend this place. This is a must try."', author: 'Hamie Monnier', delay: 500 },
-          ].map((r, i) => (
-            <div key={i} className="review-card" data-aos="fade-up" data-aos-delay={r.delay}>
-              <div className="stars">★★★★★</div>
-              <p className="review-text">{r.text}</p>
-              <p className="review-author">- {r.author}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <GoogleReviews />
 
       {selectedProduct && <QuickViewModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />}
     </>

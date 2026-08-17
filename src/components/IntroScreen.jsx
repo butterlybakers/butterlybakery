@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const storyLines = [
-  "Once upon a time in Bangalore...",
-  "In a small, quiet corner of the city...",
-  "Magic was being baked into every crust...",
   "Welcome to Butterly Bakery."
 ];
 
@@ -40,21 +37,13 @@ const IntroScreen = ({ onComplete }) => {
             left: 0,
             width: '100vw',
             height: '100vh',
-            backgroundColor: '#0a0a0a',
+            backgroundColor: '#FFFFFF',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 99999,
           }}
         >
-          <button 
-            onClick={() => { setIsVisible(false); onComplete(); }}
-            style={{ position: 'absolute', bottom: '30px', right: '40px', background: 'transparent', color: 'rgba(249, 160, 63, 0.7)', border: '1px solid rgba(249, 160, 63, 0.5)', padding: '8px 20px', borderRadius: '20px', cursor: 'pointer', zIndex: 100, fontSize: '1.2rem', fontFamily: '"Cinzel", serif', transition: 'all 0.3s' }}
-            onMouseEnter={(e) => { e.currentTarget.style.color = '#F9A03F'; e.currentTarget.style.borderColor = '#F9A03F'; }}
-            onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(249, 160, 63, 0.7)'; e.currentTarget.style.borderColor = 'rgba(249, 160, 63, 0.5)'; }}
-          >
-            Skip Story
-          </button>
           <AnimatePresence mode="wait">
             <motion.h1
               key={lineIndex}

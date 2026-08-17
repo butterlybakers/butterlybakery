@@ -4,9 +4,9 @@
   --primary: #e89e25;
   --secondary: #234E41; /* Dark green */
   --accent: #e89e25; /* Butter yellow accent */
-  --bg-color: #FAF9F6; /* White */
+  --bg-color: #FFFFFF; /* Pure White */
   --text-dark: #1A3A30; /* Very dark green for text */
-  --text-light: #FAF9F6;
+  --text-light: #FFFFFF;
   --glass-bg: rgba(250, 249, 246, 0.7);
   --glass-border: rgba(250, 249, 246, 0.4);
 }
@@ -86,38 +86,7 @@ body {
   position: relative;
 }
 
-/* Background floating decorative blobs */
-.bg-blob {
-  position: fixed;
-  filter: blur(100px);
-  z-index: -1;
-  opacity: 0.6;
-  border-radius: 50%;
-  animation: floatBlob 10s infinite alternate ease-in-out;
-  transition: background 0.8s ease;
-}
-
-.blob-1 {
-  width: 400px;
-  height: 400px;
-  background: var(--primary);
-  top: -100px;
-  left: -100px;
-}
-
-.blob-2 {
-  width: 500px;
-  height: 500px;
-  background: var(--accent);
-  top: 50%;
-  right: -200px;
-  animation-delay: -5s;
-}
-
-@keyframes floatBlob {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(50px, 50px) scale(1.1); }
-}
+/* Background blobs removed completely per user request */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
@@ -136,7 +105,7 @@ header {
   border-bottom: 1px solid var(--glass-border);
   z-index: 1000;
   transition: all 0.4s ease;
-  padding: 10px 0;
+  padding: 40px 0 10px;
 }
 
 header.scrolled {
@@ -209,7 +178,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 }
 
 main {
-  padding-top: 180px;
+  padding-top: 280px; /* Increased to prevent crossover with the huge scaled logo */
   min-height: calc(100vh - 100px);
 }
 
@@ -220,47 +189,48 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/assets/hero.png');
+  background-image: url('/images/pattern.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 2rem 5rem 2rem;
-  border-radius: 30px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 20px 50px rgba(0,0,0,0.1);
 }
 
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(135deg, rgba(43, 45, 66, 0.6) 0%, rgba(181, 101, 118, 0.4) 100%);
-}
+/* Overlay removed per user request so the pattern shows clearly */
 
 .hero-content {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: var(--text-light);
   max-width: 800px;
-  padding: 2rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 0; /* Sharp edges as requested */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  color: var(--text-dark);
 }
 
 .hero h1 {
   font-size: 5rem;
-  color: var(--text-light);
+  color: var(--secondary); /* Dark green instead of white */
   margin-bottom: 1rem;
   letter-spacing: 3px;
-  text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-shadow: none; /* Removed shadow since it's dark text on light bg */
 }
 
 .hero p {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 600;
+  color: var(--text-dark); /* Dark text for readability */
   letter-spacing: 1px;
   margin-bottom: 2.5rem;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  text-shadow: none;
 }
 
 /* Premium Button */
@@ -338,7 +308,7 @@ main {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: 0;
   padding: 2rem;
   text-align: center;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -413,7 +383,7 @@ footer p {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   padding: 2.5rem;
-  border-radius: 20px;
+  border-radius: 0;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   border: 1px solid rgba(255,255,255,0.8);
   transition: transform 0.3s ease;
@@ -447,7 +417,7 @@ footer p {
 #page-loader {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(135deg, #ffffff 0%, #e89e25 100%);
+  background: #FFFFFF;
   z-index: 999999;
   display: flex;
   justify-content: center;
@@ -661,25 +631,26 @@ body.dark-mode .bg-blob {
 
   nav ul {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 80px;
     left: 0;
     width: 100%;
+    height: calc(100vh - 80px);
     background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     border-bottom: 1px solid var(--glass-border);
     padding: 2rem 0;
-    gap: 1.5rem;
+    gap: 2rem;
     align-items: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transform: translateY(-150%);
+    transform: translateX(-100%);
     transition: transform 0.4s ease;
     z-index: 1000;
   }
 
   nav.mobile-menu-open ul {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .header-container {
@@ -703,13 +674,38 @@ body.dark-mode .bg-blob {
 
   main { padding-top: 100px; }
   .hero { margin: 0 1rem 3rem 1rem; height: 60vh; }
-  .hero h1 { font-size: 2.5rem; }
+  .hero h1 { font-size: 2.2rem; }
   .hero p { font-size: 1rem; }
   
+  .section-container {
+    padding: 3rem 1rem !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+    margin-bottom: 3rem !important;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: 2rem !important;
+  }
+
+  .product-card {
+    padding: 1.5rem !important;
+  }
+
   .product-img-wrapper {
     width: 200px;
     height: 200px;
     margin-top: -40px;
+  }
+
+  footer {
+    padding: 2rem 1rem !important;
+  }
+
+  .nav-arrow {
+    display: none !important;
   }
 }
 
@@ -912,3 +908,6 @@ body.dark-mode .bg-blob {
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--glass-border);
 }
+
+* { font-family: 'Comic Sans MS', 'Comic Sans', cursive !important; }
+
