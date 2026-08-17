@@ -29,7 +29,7 @@ const Contact = () => {
             <span style={{ fontSize: '1.5rem' }}>📍</span>
             <div>
               <h4 style={{ color: 'var(--text-dark)', marginBottom: '0.2rem' }}>Visit Us</h4>
-              <p style={{ color: '#555' }}>123 Bakery Lane, Indiranagar<br/>Bangalore, Karnataka 560038</p>
+              <p style={{ color: '#555' }}>03, Sarjapura - Attibele Rd,<br/>Sarjapura, Karnataka 562125</p>
             </div>
           </div>
           
@@ -45,7 +45,7 @@ const Contact = () => {
             <span style={{ fontSize: '1.5rem' }}>✉️</span>
             <div>
               <h4 style={{ color: 'var(--text-dark)', marginBottom: '0.2rem' }}>Email Us</h4>
-              <p style={{ color: '#555' }}>hello@butterlybakery.com</p>
+              <p style={{ color: '#555' }}>butterly.bakers@gmail.com</p>
             </div>
           </div>
         </div>

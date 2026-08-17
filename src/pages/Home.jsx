@@ -10,10 +10,10 @@ import FlavorOracle from '../components/FlavorOracle';
 import { useCart } from '../context/CartContext';
 
 const featuredProducts = [
-  { id: 'p1', name: 'Chocolate Truffle Cake', price: 150, description: 'Decadent, rich, and utterly irresistible. Our signature chocolate experience with a delicate coconut crunch.', image: '/images/truffle_cake_1785271864770.png' },
-  { id: 'p2', name: 'Korean Cream Cheese Bun', price: 120, description: 'Soft, fluffy, and filled with creamy, buttery garlic goodness. A savory-sweet masterpiece.', image: '/images/cream_bun_1785271874235.png' },
-  { id: 'p3', name: 'Classic Tres Leches', price: 180, description: 'A light, airy sponge cake soaked in three kinds of milk. The ultimate melt-in-your-mouth experience.', image: '/images/tres_leches_1785271883022.png' },
-  { id: 'p4', name: 'Macaron Box (6 pcs)', price: 450, description: 'A beautiful assortment of our delicate, melt-in-your-mouth macarons. Comes in various magical flavors.', image: '/images/macarons_1785271892400.png' },
+  { id: 'p1', name: 'Classic Tres Leches', price: 180, description: 'A light, airy sponge cake soaked in three kinds of milk. The ultimate melt-in-your-mouth experience.', image: '/images/tres_leches_1785271883022.png' },
+  { id: 'p2', name: 'Coffee Crunch', price: 160, description: 'A rich coffee infused pastry with a delightful crunchy texture.', image: '/images/truffle_cake_1785271864770.png' },
+  { id: 'p3', name: 'Korean Bun', price: 120, description: 'Soft, fluffy, and filled with creamy goodness.', image: '/images/cream_bun_1785271874235.png' },
+  { id: 'p4', name: 'Biscoff Brownie', price: 140, description: 'Fudgy brownie swirled with rich Biscoff spread.', image: '/images/macarons_1785271892400.png' },
 ];
 
 const Home = () => {
@@ -40,14 +40,14 @@ const Home = () => {
         <div className="hero-content" style={{ flex: '1 1 300px' }}>
           <TextReveal text="The Magic of Baking" className="hero-title" delay={0.2} />
           <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" style={{ marginTop: '1rem' }}>
-            Experience pastries that melt in your mouth, crafted with love and a sprinkle of fairy dust.
+            Experience Pastries that melt in your mouth, crafted with love and a sprinkle of joy.
           </p>
           <div data-aos="zoom-in" data-aos-delay="800" style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <MagneticButton className="btn" onClick={() => window.location.href = '/products'}>
+            <MagneticButton className="btn" style={{ background: '#e89e25', color: '#ffffff' }} onClick={() => window.location.href = '/products'}>
               Explore Menu
             </MagneticButton>
-            <button className="btn" onClick={handleSurpriseMe} style={{ background: 'transparent', border: '2px solid var(--primary)', color: 'var(--primary)', animation: 'pulse 2s ease-in-out infinite' }}>
-              ✨ Surprise Me!
+            <button className="btn" onClick={handleSurpriseMe} style={{ background: '#ffffff', border: 'none', color: '#e89e25', animation: 'pulse 2s ease-in-out infinite' }}>
+              Surprise Me
             </button>
           </div>
         </div>
@@ -61,11 +61,7 @@ const Home = () => {
         <h2 className="section-title" data-aos="fade-up">Our Philosophy</h2>
         <div style={{ maxWidth: '800px', margin: '0 auto' }} data-aos="fade-up" data-aos-delay="200">
           <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: '1.8', marginBottom: '2rem', opacity: 0.8 }}>
-            Baking is more than just combining ingredients; it is an art form. At Butterly Bakery, we believe in the magic of transformation.
-            Like a butterfly emerging in vibrant colors, we turn the simplest, highest-quality ingredients into breathtaking, mouth-watering masterpieces.
-          </p>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-dark)', lineHeight: '1.8', opacity: 0.8 }}>
-            Whether it is a morning pastry to start your day or a custom multi-tiered cake for your grandest celebration, our commitment to excellence is baked into every single layer.
+            whether its your morning bread to start your day..... or a custom multi-tiered cake for your grandest celebration, our commitment to excellence is baked into every single layer.
           </p>
         </div>
       </section>
@@ -86,7 +82,7 @@ const Home = () => {
                 <p>{product.description}</p>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1rem' }}>
                   <p className="price">₹{product.price}</p>
-                  <button className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }} onClick={() => addToCart(product)}>Add ✨</button>
+                  <button className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }} onClick={() => addToCart(product)}>Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -99,27 +95,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* The Flavor Oracle — Interactive Tarot Matcher */}
-      <FlavorOracle />
-
-      {/* Quality Section */}
-      <section className="section-container">
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
-          <div style={{ flex: 1, minWidth: '300px' }} data-aos="fade-right">
-            <h2 className="section-title" style={{ textAlign: 'left', margin: '0 0 2rem 0' }}>Finest Ingredients</h2>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '1.5rem', opacity: 0.8 }}>
-              A masterpiece is only as good as the canvas it is built upon. We source only the absolute finest, premium ingredients.
-            </p>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}><span style={{ fontSize: '1.5rem' }}>🧈</span> Pure European-style butter</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}><span style={{ fontSize: '1.5rem' }}>🍫</span> Belgian artisan chocolate</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}><span style={{ fontSize: '1.5rem' }}>🌾</span> Organic, locally-milled flour</li>
-              <li style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}><span style={{ fontSize: '1.5rem' }}>🍓</span> Fresh, seasonal fruits</li>
-            </ul>
-          </div>
-          <div style={{ flex: 1, minWidth: '300px', height: '400px', backgroundImage: 'url(/images/home_baking_1785271944924.png)', backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '30px', boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }} data-aos="fade-left" />
-        </div>
-      </section>
+      {/* Removed Flavor Oracle and Quality sections */}
 
       {/* Reviews Section */}
       <section className="section-container" style={{ marginBottom: '5rem' }}>

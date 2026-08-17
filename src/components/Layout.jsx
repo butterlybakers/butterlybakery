@@ -16,9 +16,10 @@ const Layout = () => {
 
   const cursorDotRef = React.useRef(null);
   const cursorRingRef = React.useRef(null);
-  const [cursorExpand, setCursorExpand] = useState(false);
+  const cursorExpand = false;
   const location = useLocation();
   const { totalItems, setIsCartOpen } = useCart();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 
 
@@ -137,33 +138,6 @@ const Layout = () => {
         </div>
       </div>
 
-      {/* Scroll Progress Butterfly Trail */}
-      <motion.div
-        style={{
-          position: 'fixed',
-          top: 0,
-          right: '40px',
-          height: '100vh',
-          width: '2px',
-          background: 'linear-gradient(to bottom, transparent, var(--accent), transparent)',
-          opacity: scrollProgress > 1 ? 0.3 : 0,
-          zIndex: 9998,
-          transition: 'opacity 0.5s ease'
-        }}
-      >
-        <motion.div
-          style={{
-            position: 'absolute',
-            top: `${scrollProgress}%`,
-            right: '-20px',
-            transform: 'translateY(-50%)',
-            filter: 'drop-shadow(0 0 10px var(--accent))'
-          }}
-        >
-          <AnimatedButterfly style={{ width: 40, height: 40 }} />
-        </motion.div>
-      </motion.div>
-
       {/* Background Blobs */}
       <div className="bg-blob blob-1"></div>
       <div className="bg-blob blob-2"></div>
@@ -171,7 +145,7 @@ const Layout = () => {
       {/* Header */}
       <header id="main-header" className={scrolled ? 'scrolled' : ''}>
         <div className="header-container">
-          <div className="logo-container" data-aos="fade-down" data-aos-duration="1000" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
+          <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
             <NavLink to="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               {/* Logo Image */}
               <img 
@@ -200,13 +174,20 @@ const Layout = () => {
             </NavLink>
           </div>
           
-          <nav data-aos="fade-in" data-aos-duration="1500" data-aos-delay="300" style={{ marginTop: '10px' }}>
-            <ul>
+          {/* Hamburger Icon */}
+          <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
+            <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
+          </div>
+
+          <nav style={{ marginTop: '10px' }} className={isMobileMenuOpen ? 'mobile-menu-open' : ''}>
+            <ul onClick={() => setIsMobileMenuOpen(false)}>
               <li><NavLink to="/" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Home</NavLink></li>
-              <li><NavLink to="/about" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>About</NavLink></li>
               <li><NavLink to="/products" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Products</NavLink></li>
-              <li><NavLink to="/customizations" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Customizations</NavLink></li>
-              <li><NavLink to="/bulk-orders" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Bulk / Corporate</NavLink></li>
+              <li><NavLink to="/customizations" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Customization</NavLink></li>
+              <li><NavLink to="/bulk-orders" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Bulk/Corporate</NavLink></li>
+              <li><NavLink to="/about" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>About</NavLink></li>
               <li><NavLink to="/contact" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Contact</NavLink></li>
               <li>
                 <a href="#" onClick={toggleDarkMode}>
@@ -231,9 +212,9 @@ const Layout = () => {
             <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.8rem', color: '#F9A03F', marginBottom: '1rem' }}>Butterly Bakery</h3>
             <p style={{ opacity: 0.7, lineHeight: '1.8', fontSize: '0.95rem' }}>Where every bite is a fairy tale. Baked with love and a sprinkle of magic in Bangalore.</p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', fontSize: '1.5rem' }}>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', opacity: 0.8 }}>📸</a>
+              <a href="https://www.instagram.com/butterly.bakers?igsh=MTM1OTExcWxmenFpbg==" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', opacity: 0.8 }}>📸</a>
               <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', opacity: 0.8 }}>💬</a>
-              <a href="mailto:hello@butterlybakery.com" style={{ textDecoration: 'none', opacity: 0.8 }}>✉️</a>
+              <a href="mailto:butterly.bakers@gmail.com" style={{ textDecoration: 'none', opacity: 0.8 }}>✉️</a>
             </div>
           </div>
           {/* Quick Links */}
@@ -248,7 +229,7 @@ const Layout = () => {
           {/* Contact */}
           <div>
             <h4 style={{ fontFamily: '"Cinzel", serif', color: '#F9A03F', marginBottom: '1rem' }}>Visit Us</h4>
-            <p style={{ opacity: 0.7, fontSize: '0.95rem', lineHeight: '1.8' }}>📍 123 Bakery Lane, Indiranagar<br/>Bangalore, Karnataka 560038</p>
+            <p style={{ opacity: 0.7, fontSize: '0.95rem', lineHeight: '1.8' }}>📍 03, Sarjapura - Attibele Rd,<br/>Sarjapura, Karnataka 562125</p>
             <p style={{ opacity: 0.7, fontSize: '0.95rem', marginTop: '1rem' }}>📞 +91 98765 43210</p>
             <p style={{ opacity: 0.7, fontSize: '0.95rem', marginTop: '0.5rem' }}>🕐 Mon–Sat: 8am – 9pm</p>
           </div>
@@ -268,7 +249,7 @@ const Layout = () => {
       {/* Floating Cart Button */}
       <button 
         className="btn" 
-        style={{ position: 'fixed', bottom: '170px', right: '30px', zIndex: 9999, borderRadius: '50px', padding: '12px 20px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)', fontSize: '0.9rem' }}
+        style={{ position: 'fixed', bottom: '100px', right: '30px', zIndex: 9999, borderRadius: '50px', padding: '12px 20px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)', fontSize: '0.9rem' }}
         onClick={() => setIsCartOpen(true)}
       >
         🛍️ {totalItems > 0 ? `Cart (${totalItems})` : 'Cart'}
