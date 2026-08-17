@@ -189,9 +189,9 @@ const Cake3D = () => {
   return (
     <div style={{ width: '100%', height: '400px', cursor: 'grab' }}>
       <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 2, 5], fov: 45 }}>
-        <Stage environment="city" intensity={0.5}>
-          <DetailedPastryModel type={type} />
-        </Stage>
+        <ambientLight intensity={0.7} />
+        <directionalLight position={[10, 10, 5]} intensity={1.5} castShadow />
+        <DetailedPastryModel type={type} />
         <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
       </Canvas>
     </div>
