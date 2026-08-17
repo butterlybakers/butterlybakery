@@ -80,12 +80,12 @@ const Products = () => {
             placeholder="Search for a magical treat..." 
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            style={{ padding: '0.8rem 1.2rem', borderRadius: '30px', border: '1px solid var(--accent)', flex: '1', minWidth: '250px', outline: 'none' }}
+            style={{ padding: '0.8rem 1.2rem', borderRadius: '0', border: '1px solid var(--accent)', flex: '1', minWidth: '250px', outline: 'none' }}
           />
           <select 
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value)}
-            style={{ padding: '0.8rem 1.2rem', borderRadius: '30px', border: '1px solid var(--accent)', outline: 'none', backgroundColor: '#fff', color: 'var(--text-dark)', cursor: 'pointer' }}
+            style={{ padding: '0.8rem 1.2rem', borderRadius: '0', border: '1px solid var(--accent)', outline: 'none', backgroundColor: '#fff', color: 'var(--text-dark)', cursor: 'pointer' }}
           >
             <option value="default">Sort By</option>
             <option value="price-asc">Price: Low to High</option>
@@ -139,10 +139,10 @@ const Products = () => {
                 onClick={() => setActiveCategory(cat)}
                 style={{
                   padding: '0.6rem 1.5rem',
-                  borderRadius: '30px',
+                  borderRadius: '0',
                   border: activeCategory === cat ? 'none' : '1px solid var(--primary)',
-                  backgroundColor: activeCategory === cat ? 'var(--primary)' : 'transparent',
-                  color: activeCategory === cat ? '#fff' : 'var(--primary)',
+                  backgroundColor: activeCategory === cat ? '#FFFFFF' : 'transparent',
+                  color: activeCategory === cat ? 'var(--text-dark)' : 'var(--primary)',
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                   transition: 'all 0.3s ease',
@@ -183,8 +183,8 @@ const Products = () => {
       <div className="products-grid">
         {displayProducts.length > 0 ? (
           displayProducts.map((product, i) => (
-            <div key={`${product.id}-${i}`} className="product-card" data-aos="fade-up" style={{ position: 'relative', overflow: 'hidden' }}>
-              <div className="product-img-wrapper" style={{ backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', borderRadius: '15px 15px 0 0' }}>
+            <div key={`${product.id}-${i}`} className="product-card" data-aos="fade-up" style={{ position: 'relative', overflow: 'visible' }}>
+              <div className="product-img-wrapper" style={{ backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', borderRadius: '0' }}>
                 <p style={{ color: '#888', fontStyle: 'italic', padding: '1rem', textAlign: 'center' }}>{product.image}</p>
               </div>
               <div className="product-info">
@@ -196,7 +196,7 @@ const Products = () => {
                 
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '1.5rem' }}>
                   <p className="price" style={{ margin: 0 }}>₹{product.price}</p>
-                  <button className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }} onClick={() => addToCart(product)}>Add ✨</button>
+                  <button className="btn" style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }} onClick={() => addToCart(product)}>Add</button>
                 </div>
               </div>
             </div>

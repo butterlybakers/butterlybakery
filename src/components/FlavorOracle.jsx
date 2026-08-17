@@ -102,7 +102,7 @@ const FlavorOracle = () => {
         style={{
           background: 'radial-gradient(ellipse at center, rgba(74,46,18,0.95) 0%, rgba(45,26,8,0.98) 100%)',
           border: '2px solid #c8a86a',
-          borderRadius: '30px',
+          borderRadius: '0',
           padding: '3rem 2rem',
           boxShadow: '0 20px 60px rgba(0,0,0,0.5), inset 0 2px 10px rgba(212,175,55,0.2)',
           position: 'relative',
@@ -157,7 +157,7 @@ const FlavorOracle = () => {
                       ? 'linear-gradient(135deg, rgba(212,175,55,0.25), rgba(139,69,19,0.4))'
                       : 'rgba(255,255,255,0.05)',
                     border: isSelected ? '2px solid #d4af37' : '1px solid rgba(212,175,55,0.2)',
-                    borderRadius: '16px',
+                    borderRadius: '0',
                     color: '#FFF8E7',
                     cursor: 'pointer',
                     textAlign: 'left',
@@ -186,7 +186,7 @@ const FlavorOracle = () => {
                 height: '460px',
                 position: 'relative',
                 transformStyle: 'preserve-3d',
-                borderRadius: '20px',
+                borderRadius: '0',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.6), 0 0 30px rgba(212,175,55,0.2)'
               }}
             >
@@ -196,7 +196,7 @@ const FlavorOracle = () => {
                 inset: 0,
                 background: 'linear-gradient(145deg, #fefaf0 0%, #ede0c2 100%)',
                 border: '3px solid #c8a86a',
-                borderRadius: '20px',
+                borderRadius: '0',
                 padding: '1.5rem',
                 display: 'flex',
                 flexDirection: 'column',
@@ -219,7 +219,7 @@ const FlavorOracle = () => {
                   backgroundImage: `url(${selectedMood.product.image})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
-                  borderRadius: '12px',
+                  borderRadius: '0',
                   border: '2px solid #c8a86a',
                   boxShadow: '0 6px 16px rgba(0,0,0,0.2)',
                   position: 'relative'
@@ -249,7 +249,7 @@ const FlavorOracle = () => {
                     background: 'linear-gradient(135deg, #8b4513, #5a2d00)',
                     color: '#f5d070',
                     border: '1.5px solid #c8a86a',
-                    borderRadius: '10px',
+                    borderRadius: '0',
                     fontFamily: '"Cinzel", serif',
                     fontSize: '0.95rem',
                     fontWeight: 700,

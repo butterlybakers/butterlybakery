@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 const Layout = () => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [darkMode, setDarkMode] = useState(false);
+
   const [loading, setLoading] = useState(true);
 
   const cursorDotRef = React.useRef(null);
@@ -24,15 +24,8 @@ const Layout = () => {
 
 
 
-
   useEffect(() => {
     AOS.init({ once: true, offset: 100 });
-    
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      setDarkMode(true);
-      document.body.classList.add('dark-mode');
-    }
   }, []);
 
   useEffect(() => {
@@ -60,60 +53,6 @@ const Layout = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDarkMode = (e) => {
-    e.preventDefault();
-    const isDark = !darkMode;
-    
-    // Calculate click coordinates for the circle origin
-    const x = e.clientX || window.innerWidth / 2;
-    const y = e.clientY || window.innerHeight / 2;
-    const endRadius = Math.hypot(
-      Math.max(x, window.innerWidth - x),
-      Math.max(y, window.innerHeight - y)
-    );
-
-    // Fallback for browsers that don't support startViewTransition
-    if (!document.startViewTransition) {
-      setDarkMode(isDark);
-      if (isDark) {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-      }
-      return;
-    }
-
-    const transition = document.startViewTransition(() => {
-      setDarkMode(isDark);
-      if (isDark) {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('theme', 'light');
-      }
-    });
-
-    transition.ready.then(() => {
-      const clipPath = [
-        `circle(0px at ${x}px ${y}px)`,
-        `circle(${endRadius}px at ${x}px ${y}px)`
-      ];
-
-      document.documentElement.animate(
-        {
-          clipPath: isDark ? clipPath : clipPath.reverse()
-        },
-        {
-          duration: 600,
-          easing: 'ease-in-out',
-          pseudoElement: isDark ? '::view-transition-new(root)' : '::view-transition-old(root)'
-        }
-      );
-    });
-  };
 
   return (
     <>
@@ -150,12 +89,12 @@ const Layout = () => {
                 src="/images/butterly-logo-main.png" 
                 alt="Butterly Bakery Logo" 
                 style={{ 
-                  height: scrolled ? '80px' : '150px', 
+                  height: scrolled ? '80px' : '120px', 
                   transition: 'height 0.4s ease, transform 0.4s ease',
                   objectFit: 'contain',
                   marginTop: scrolled ? '0' : '10px',
-                  marginBottom: scrolled ? '0' : '25px',
-                  transform: scrolled ? 'scale(1.5)' : 'scale(2.5)',
+                  marginBottom: scrolled ? '0' : '45px',
+                  transform: scrolled ? 'scale(1.2)' : 'scale(1.8)',
                   filter: 'brightness(1.3)'
                 }} 
               />
@@ -173,14 +112,22 @@ const Layout = () => {
             <ul onClick={() => setIsMobileMenuOpen(false)}>
               <li><NavLink to="/" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Home</NavLink></li>
               <li><NavLink to="/products" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Products</NavLink></li>
-              <li><NavLink to="/customizations" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Customization</NavLink></li>
+              <li><NavLink to="/customizations" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Custom Cakes</NavLink></li>
               <li><NavLink to="/bulk-orders" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Bulk/Corporate</NavLink></li>
               <li><NavLink to="/about" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>About</NavLink></li>
               <li><NavLink to="/contact" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Contact</NavLink></li>
-              <li>
-                <a href="#" onClick={toggleDarkMode}>
-                  {darkMode ? '☀️' : '🌙'}
-                </a>
+              <li style={{ display: 'flex', alignItems: 'center' }}>
+                <button 
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'relative', display: 'flex', alignItems: 'center' }}
+                  onClick={() => setIsCartOpen(true)}
+                >
+                  <img src="/images/shopping-cart.png" alt="Cart" style={{ width: '30px', height: '30px' }} />
+                  {totalItems > 0 && (
+                    <span style={{ position: 'absolute', top: '-8px', right: '-12px', background: 'var(--primary)', color: '#fff', borderRadius: '50%', padding: '2px 7px', fontSize: '0.75rem', fontWeight: 'bold', boxShadow: '0 2px 5px rgba(0,0,0,0.2)' }}>
+                      {totalItems}
+                    </span>
+                  )}
+                </button>
               </li>
             </ul>
           </nav>
@@ -194,7 +141,7 @@ const Layout = () => {
 
       {/* Rich Footer */}
       <footer style={{ background: 'var(--secondary)', color: '#FFF8E7', padding: '4rem 2rem 2rem', marginTop: '4rem' }}>
-        <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
+        <div style={{ maxWidth: '1600px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
           {/* Brand */}
           <div>
             <h3 style={{ fontFamily: '"Cinzel", serif', fontSize: '1.8rem', color: '#F9A03F', marginBottom: '1rem' }}>Butterly Bakery</h3>
@@ -228,20 +175,14 @@ const Layout = () => {
       </footer>
 
       {/* WhatsApp Button */}
-      <a href="https://wa.me/919876543210" className="whatsapp-btn" target="_blank" rel="noreferrer" style={{ bottom: '30px', right: '30px' }}>
-        💬
+      <a href="https://wa.me/919876543210" className="whatsapp-btn" target="_blank" rel="noreferrer" style={{ bottom: '30px', right: '30px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="white" style={{ marginTop: '2px' }}>
+          <path d="M12.031 0C5.383 0 0 5.383 0 12.031c0 2.124.553 4.186 1.603 6.014L.25 23.75l5.859-1.536c1.765.952 3.746 1.455 5.922 1.455 6.648 0 12.031-5.383 12.031-12.031C24.062 5.383 18.679 0 12.031 0zm6.81 17.387c-.276.78-1.597 1.456-2.203 1.517-.606.061-1.398.118-4.225-1.047-3.415-1.408-5.65-4.945-5.819-5.176-.17-.23-1.385-1.846-1.385-3.522 0-1.676.878-2.497 1.189-2.825.31-.328.674-.412.898-.412.224 0 .448 0 .643.01.205.01.48-.078.75.57.27.649.927 2.261 1.008 2.424.081.163.136.35.027.57-.109.22-.163.35-.326.545-.163.194-.343.412-.489.558-.163.163-.336.34-.145.668.191.328.852 1.407 1.834 2.285 1.266 1.134 2.33 1.488 2.658 1.651.328.163.518.136.709-.081.191-.217.82-1.047 1.038-1.408.218-.36.436-.3.736-.191.3.109 1.895.894 2.222 1.057.327.163.545.245.626.381.082.136.082.79-.194 1.57z"/>
+        </svg>
       </a>
 
 
 
-      {/* Floating Cart Button */}
-      <button 
-        className="btn" 
-        style={{ position: 'fixed', bottom: '100px', right: '30px', zIndex: 9999, borderRadius: '50px', padding: '12px 20px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)', fontSize: '0.9rem' }}
-        onClick={() => setIsCartOpen(true)}
-      >
-        🛍️ {totalItems > 0 ? `Cart (${totalItems})` : 'Cart'}
-      </button>
 
       <SidebarCart />
 
@@ -254,7 +195,7 @@ const Layout = () => {
             color: 'var(--text-dark)',
             backdropFilter: 'blur(10px)',
             border: '1px solid var(--glass-border)',
-            borderRadius: '15px'
+            borderRadius: '0'
           }
         }}
       />

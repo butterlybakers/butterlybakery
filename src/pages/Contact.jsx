@@ -21,7 +21,7 @@ const Contact = () => {
       <h1 className="section-title" data-aos="fade-down">Contact Us</h1>
       
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', justifyContent: 'center' }}>
-        <div style={{ flex: 1, minWidth: '300px', maxWidth: '500px', background: 'var(--glass-bg)', padding: '2.5rem', borderRadius: '20px', border: '1px solid var(--glass-border)' }} data-aos="fade-right">
+        <div style={{ flex: 1, minWidth: '300px', maxWidth: '500px', background: 'var(--glass-bg)', padding: '2.5rem', borderRadius: '0', border: '1px solid var(--glass-border)' }} data-aos="fade-right">
           <h2 style={{ color: 'var(--secondary)', marginBottom: '1.5rem' }}>Get in Touch</h2>
           <p style={{ marginBottom: '2rem', color: 'var(--text-dark)' }}>We'd love to hear from you! Whether you have a question about our menu, need to place a custom order, or just want to say hello.</p>
           
@@ -54,15 +54,15 @@ const Contact = () => {
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-dark)', fontWeight: '500' }}>Name</label>
-              <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '1rem', borderRadius: '10px', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem' }} required />
+              <input type="text" placeholder="Your Name" style={{ width: '100%', padding: '1rem', borderRadius: '0', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem' }} required />
             </div>
             <div>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-dark)', fontWeight: '500' }}>Email</label>
-              <input type="email" placeholder="Your Email" style={{ width: '100%', padding: '1rem', borderRadius: '10px', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem' }} required />
+              <input type="email" placeholder="Your Email" style={{ width: '100%', padding: '1rem', borderRadius: '0', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem' }} required />
             </div>
             <div>
               <label style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-dark)', fontWeight: '500' }}>Message</label>
-              <textarea placeholder="How can we help you?" rows="5" style={{ width: '100%', padding: '1rem', borderRadius: '10px', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem', resize: 'vertical' }} required></textarea>
+              <textarea placeholder="How can we help you?" rows="5" style={{ width: '100%', padding: '1rem', borderRadius: '0', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '1rem', resize: 'vertical' }} required></textarea>
             </div>
             <button type="submit" className="btn" style={{ width: '100%', border: 'none', cursor: 'none' }}>Send Message</button>
           </form>

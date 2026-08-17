@@ -124,7 +124,7 @@ const About = () => {
             style={{
               background: 'var(--glass-bg)',
               border: '1px solid var(--glass-border)',
-              borderRadius: '24px',
+              borderRadius: '0',
               padding: '2.5rem',
               boxShadow: '0 15px 35px rgba(0,0,0,0.12)',
               display: 'flex',
@@ -154,7 +154,7 @@ const About = () => {
                   width: '280px',
                   height: '280px',
                   objectFit: 'cover',
-                  borderRadius: '16px',
+                  borderRadius: '0',
                   border: '3px solid #c8a86a',
                   boxShadow: '0 8px 24px rgba(0,0,0,0.25)'
                 }}
@@ -186,7 +186,7 @@ const About = () => {
               style={{
                 background: 'var(--glass-bg)',
                 border: '1px solid var(--glass-border)',
-                borderRadius: '20px',
+                borderRadius: '0',
                 padding: '2rem',
                 textAlign: 'center',
                 display: 'flex',
@@ -245,7 +245,7 @@ const About = () => {
               style={{
                 background: 'linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,248,231,0.9))',
                 border: '1.5px solid #d4af37',
-                borderRadius: '16px',
+                borderRadius: '0',
                 padding: '1.8rem 1.5rem',
                 textAlign: 'center',
                 boxShadow: '0 8px 20px rgba(0,0,0,0.08)'

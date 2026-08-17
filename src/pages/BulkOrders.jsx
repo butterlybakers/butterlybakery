@@ -89,7 +89,7 @@ const BulkOrders = () => {
             background: 'linear-gradient(135deg, #8b4513, #5a2d00)',
             color: '#f5d070',
             border: '2px solid #c8a86a',
-            borderRadius: '50px',
+            borderRadius: '0',
             fontFamily: '"Cinzel", serif',
             fontSize: '1rem',
             fontWeight: 700,
@@ -117,7 +117,7 @@ const BulkOrders = () => {
             background: 'var(--glass-bg)',
             color: 'var(--secondary)',
             border: '2px solid var(--secondary)',
-            borderRadius: '50px',
+            borderRadius: '0',
             fontFamily: '"Cinzel", serif',
             fontSize: '1rem',
             fontWeight: 700,
@@ -142,8 +142,9 @@ const BulkOrders = () => {
           <motion.div
             key={ev.id}
             whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.15)' }}
+            onMouseEnter={() => setSelected(ev.id)}
+            onMouseLeave={() => setSelected(null)}
             onClick={() => {
-              setSelected(selected === ev.id ? null : ev.id);
               setForm(f => ({ ...f, eventType: ev.label }));
               setInquiryType('book');
               scrollToSection('quotation-section');
@@ -151,7 +152,7 @@ const BulkOrders = () => {
             style={{
               background: selected === ev.id ? ev.color : 'var(--glass-bg)',
               border: `2px solid ${selected === ev.id ? ev.color : 'var(--glass-border)'}`,
-              borderRadius: '20px',
+              borderRadius: '0',
               padding: '2rem',
               cursor: 'pointer',
               transition: 'all 0.3s',
@@ -184,7 +185,7 @@ const BulkOrders = () => {
           style={{
             background: 'radial-gradient(ellipse at center, rgba(255,255,255,0.85) 0%, rgba(255,248,231,0.95) 100%)',
             border: '2px solid #c8a86a',
-            borderRadius: '24px',
+            borderRadius: '0',
             padding: '3rem 2.5rem',
             boxShadow: '0 20px 50px rgba(0,0,0,0.12)'
           }}
@@ -212,7 +213,7 @@ const BulkOrders = () => {
               style={{
                 flex: 1,
                 padding: '0.8rem 1.2rem',
-                borderRadius: '12px',
+                borderRadius: '0',
                 border: inquiryType === 'book' ? '2px solid #8b4513' : '1px solid #c8a86a',
                 background: inquiryType === 'book' ? '#8b4513' : 'transparent',
                 color: inquiryType === 'book' ? '#FFF8E7' : '#5a2000',
@@ -231,7 +232,7 @@ const BulkOrders = () => {
               style={{
                 flex: 1,
                 padding: '0.8rem 1.2rem',
-                borderRadius: '12px',
+                borderRadius: '0',
                 border: inquiryType === 'question' ? '2px solid #8b4513' : '1px solid #c8a86a',
                 background: inquiryType === 'question' ? '#8b4513' : 'transparent',
                 color: inquiryType === 'question' ? '#FFF8E7' : '#5a2000',
@@ -250,11 +251,11 @@ const BulkOrders = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem' }}>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.4rem', fontWeight: 600, color: 'var(--text-dark)', fontSize: '0.9rem' }}>Your Name *</label>
-                <input type="text" name="name" placeholder="e.g. Ananya Sharma" required value={form.name} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
+                <input type="text" name="name" placeholder="e.g. Ananya Sharma" required value={form.name} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
               </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.4rem', fontWeight: 600, color: 'var(--text-dark)', fontSize: '0.9rem' }}>Phone Number (WhatsApp) *</label>
-                <input type="tel" name="phone" placeholder="+91 98765 43210" required value={form.phone} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
+                <input type="tel" name="phone" placeholder="+91 98765 43210" required value={form.phone} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
               </div>
             </div>
 
@@ -262,11 +263,11 @@ const BulkOrders = () => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.2rem' }}>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.4rem', fontWeight: 600, color: 'var(--text-dark)', fontSize: '0.9rem' }}>Email Address *</label>
-                <input type="email" name="email" placeholder="you@company.com" required value={form.email} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
+                <input type="email" name="email" placeholder="you@company.com" required value={form.email} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
               </div>
               <div>
                 <label style={{ display: 'block', marginBottom: '0.4rem', fontWeight: 600, color: 'var(--text-dark)', fontSize: '0.9rem' }}>Event Category</label>
-                <select name="eventType" value={form.eventType} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.9)', fontSize: '0.98rem' }}>
+                <select name="eventType" value={form.eventType} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.9)', fontSize: '0.98rem' }}>
                   <option value="Corporate Events">🏢 Corporate Events</option>
                   <option value="Weddings">💍 Weddings</option>
                   <option value="Birthday Parties">🎂 Birthday Parties</option>
@@ -278,12 +279,12 @@ const BulkOrders = () => {
 
             {/* If Mode is Book Now: Show Quantity + Discount Tier */}
             {inquiryType === 'book' && (
-              <div style={{ background: 'rgba(200,168,106,0.15)', border: '1.5px dashed #8b6a2a', borderRadius: '14px', padding: '1.2rem' }}>
+              <div style={{ background: 'rgba(200,168,106,0.15)', border: '1.5px dashed #8b6a2a', borderRadius: '0', padding: '1.2rem' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
                   <label style={{ fontWeight: 700, color: '#5a2000', fontSize: '0.95rem' }}>
                     Estimated Quantity: <span style={{ fontSize: '1.15rem' }}>{form.quantity} pieces</span>
                   </label>
-                  <span style={{ background: '#8b4513', color: '#FFF8E7', padding: '0.3rem 0.8rem', borderRadius: '20px', fontSize: '0.82rem', fontWeight: 700, fontFamily: '"Cinzel", serif' }}>
+                  <span style={{ background: '#8b4513', color: '#FFF8E7', padding: '0.3rem 0.8rem', borderRadius: '0', fontSize: '0.82rem', fontWeight: 700, fontFamily: '"Cinzel", serif' }}>
                     🎁 {getDiscountTier(form.quantity)}
                   </span>
                 </div>
@@ -311,7 +312,7 @@ const BulkOrders = () => {
               <label style={{ display: 'block', marginBottom: '0.4rem', fontWeight: 600, color: 'var(--text-dark)', fontSize: '0.9rem' }}>
                 {inquiryType === 'book' ? 'Required By Date *' : 'Target Date (Optional)'}
               </label>
-              <input type="date" name="date" required={inquiryType === 'book'} value={form.date} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
+              <input type="date" name="date" required={inquiryType === 'book'} value={form.date} onChange={handleChange} style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem' }} />
             </div>
 
             {/* Row 4: Notes / Questions */}
@@ -326,7 +327,7 @@ const BulkOrders = () => {
                 value={form.notes}
                 onChange={handleChange}
                 required={inquiryType === 'question'}
-                style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '10px', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem', fontFamily: 'inherit' }}
+                style={{ width: '100%', padding: '0.85rem 1rem', borderRadius: '0', border: '1px solid #c8a86a', background: 'rgba(255,255,255,0.7)', fontSize: '0.98rem', fontFamily: 'inherit' }}
               />
             </div>
 
@@ -341,7 +342,7 @@ const BulkOrders = () => {
                   : 'linear-gradient(135deg, #8b4513, #5a2d00)',
                 color: '#FFF8E7',
                 border: 'none',
-                borderRadius: '12px',
+                borderRadius: '0',
                 fontFamily: '"Cinzel", serif',
                 fontSize: '1.05rem',
                 fontWeight: 800,

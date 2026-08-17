@@ -57,7 +57,7 @@ const SidebarCart = () => {
                   <div key={item.id} className="cart-item">
                     {/* Product thumbnail */}
                     {item.image && (
-                      <div style={{ width: '60px', height: '60px', backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '10px', flexShrink: 0, marginRight: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} />
+                      <div style={{ width: '60px', height: '60px', backgroundImage: `url(${item.image})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '0', flexShrink: 0, marginRight: '0.75rem', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }} />
                     )}
                     <div className="cart-item-info">
                       <h4>{item.name}</h4>

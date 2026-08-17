@@ -6,12 +6,26 @@ const steps = [
     title: 'Chapter 1: Choose Your Base',
     emoji: '🎂',
     options: [
-      { id: 'chocolate', label: 'Chocolate Dream', desc: 'Rich Belgian chocolate layers', icon: '🍫' },
-      { id: 'vanilla', label: 'Vanilla Cloud', desc: 'Light, airy Madagascar vanilla', icon: '☁️' },
-      { id: 'redvelvet', label: 'Red Velvet Enchantment', desc: 'Velvety crimson with cream cheese', icon: '❤️' },
-      { id: 'butterscotch', label: 'Butterscotch Magic', desc: 'Golden caramel butterscotch bliss', icon: '✨' },
-      { id: 'lemonberry', label: 'Lemon Berry Whisper', desc: 'Zesty lemon sponge with wild berries', icon: '🍋' },
-      { id: 'pistachio', label: 'Pistachio Rosewood Forest', desc: 'Roasted pistachio cake with rose infusion', icon: '🌿' },
+      { id: 'pineapple', label: 'Pineapple', desc: 'Classic pineapple flavor', icon: '🍍' },
+      { id: 'blackforest', label: 'Black Forest', desc: 'Rich chocolate and cherries', icon: '🍒' },
+      { id: 'whiteforest', label: 'White Forest', desc: 'White chocolate and cherries', icon: '❄️' },
+      { id: 'mango', label: 'Mango', desc: 'Fresh tropical mango', icon: '🥭' },
+      { id: 'strawberry', label: 'Strawberry', desc: 'Sweet fresh strawberries', icon: '🍓' },
+      { id: 'caramelbutterscotch', label: 'Caramel Butterscotch', desc: 'Golden caramel crunch', icon: '🍮' },
+      { id: 'redvelvet', label: 'Red Velvet', desc: 'Classic red velvet', icon: '❤️' },
+      { id: 'vanilla', label: 'Vanilla', desc: 'Classic vanilla', icon: '🤍' },
+      { id: 'vancho', label: 'Vancho', desc: 'Vanilla and chocolate mix', icon: '🌗' },
+      { id: 'blueberry', label: 'Blueberry', desc: 'Sweet wild blueberries', icon: '🫐' },
+      { id: 'oreochocolate', label: 'Oreo Chocolate', desc: 'Crushed Oreos in chocolate', icon: '🍪' },
+      { id: 'irishcoffee', label: 'Irish Coffee', desc: 'Rich coffee flavor', icon: '☕' },
+      { id: 'chocostrawberry', label: 'Choco Strawberry', desc: 'Chocolate with strawberries', icon: '🍫' },
+      { id: 'chocolatetruffle', label: 'Chocolate Truffle', desc: 'Dense chocolate ganache', icon: '🍩' },
+      { id: 'freshmango', label: 'Fresh Mango', desc: 'Made with real mango pieces', icon: '🌅' },
+      { id: 'belgiumtruffle', label: 'Belgium Truffle', desc: 'Premium Belgian chocolate', icon: '🧁' },
+      { id: 'rasmalai', label: 'Rasmalai', desc: 'Indian fusion delight', icon: '🏵️' },
+      { id: 'biscoff', label: 'Biscoff', desc: 'Lotus Biscoff cookie flavor', icon: '🥨' },
+      { id: 'chocohazelnut', label: 'Choco Hazelnut', desc: 'Chocolate and roasted hazelnuts', icon: '🌰' },
+      { id: 'russianhoney', label: 'Russian Honey Cake', desc: 'Layers of honey and cream', icon: '🍯' }
     ]
   },
   {
@@ -80,7 +94,7 @@ const Customizations = () => {
 
   return (
     <section className="section-container" style={{ paddingTop: '5rem', minHeight: '80vh' }}>
-      <h1 className="section-title" data-aos="fade-down" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Custom Cake Wizard</h1>
+      <h1 className="section-title" data-aos="fade-down" style={{ textAlign: 'center', marginBottom: '0.5rem' }}>Your Customization</h1>
       <p style={{ textAlign: 'center', color: 'var(--text-dark)', opacity: 0.7, marginBottom: '3rem', fontSize: '1.1rem' }}>
         Tell us your dream and we will bake it into reality ✨
       </p>
@@ -115,7 +129,7 @@ const Customizations = () => {
                 {steps[currentStep].options.map((opt) => {
                   const isSelected = selections[currentStep]?.id === opt.id;
                   return (
-                    <div key={opt.id} onClick={() => select(currentStep, opt)} style={{ background: isSelected ? 'var(--primary)' : 'var(--glass-bg)', border: `2px solid ${isSelected ? 'var(--primary)' : 'var(--glass-border)'}`, borderRadius: '15px', padding: '1.5rem', cursor: 'pointer', transition: 'all 0.3s ease', transform: isSelected ? 'scale(1.03)' : 'scale(1)', boxShadow: isSelected ? '0 10px 30px rgba(249,160,63,0.3)' : '0 2px 10px rgba(0,0,0,0.05)', color: isSelected ? 'white' : 'var(--text-dark)' }}>
+                    <div key={opt.id} onClick={() => select(currentStep, opt)} style={{ background: isSelected ? 'var(--primary)' : 'var(--glass-bg)', border: `2px solid ${isSelected ? 'var(--primary)' : 'var(--glass-border)'}`, borderRadius: '0', padding: '1.5rem', cursor: 'pointer', transition: 'all 0.3s ease', transform: isSelected ? 'scale(1.03)' : 'scale(1)', boxShadow: isSelected ? '0 10px 30px rgba(249,160,63,0.3)' : '0 2px 10px rgba(0,0,0,0.05)', color: isSelected ? 'white' : 'var(--text-dark)' }}>
                       <div style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>{opt.icon}</div>
                       <h4 style={{ fontWeight: 700, marginBottom: '0.3rem' }}>{opt.label}</h4>
                       <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>{opt.desc}</p>
@@ -140,7 +154,7 @@ const Customizations = () => {
 
         {/* Live Summary */}
         <div style={{ flex: 1, minWidth: '260px', position: 'sticky', top: '120px' }}>
-          <div style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '20px', padding: '2rem', backdropFilter: 'blur(10px)' }}>
+          <div style={{ background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '0', padding: '2rem', backdropFilter: 'blur(10px)' }}>
             <h3 style={{ fontFamily: '"Cinzel", serif', color: 'var(--secondary)', marginBottom: '1.5rem', borderBottom: '1px solid var(--glass-border)', paddingBottom: '1rem' }}>
               🧁 Your Order Summary
             </h3>
@@ -156,7 +170,7 @@ const Customizations = () => {
               </div>
             ))}
             {currentPrice && (
-              <div style={{ background: 'var(--primary)', borderRadius: '10px', padding: '1rem', textAlign: 'center', marginTop: '1.5rem', color: 'white' }}>
+              <div style={{ background: 'var(--primary)', borderRadius: '0', padding: '1rem', textAlign: 'center', marginTop: '1.5rem', color: 'white' }}>
                 <p style={{ fontSize: '0.85rem', opacity: 0.9 }}>Estimated Price</p>
                 <p style={{ fontSize: '2rem', fontWeight: 700, fontFamily: '"Cinzel", serif' }}>₹{currentPrice}</p>
               </div>
@@ -168,7 +182,7 @@ const Customizations = () => {
                   rows={3}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  style={{ width: '100%', padding: '0.8rem', borderRadius: '10px', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '0.9rem', resize: 'vertical', marginBottom: '1rem' }}
+                  style={{ width: '100%', padding: '0.8rem', borderRadius: '0', border: '1px solid var(--glass-border)', background: 'var(--glass-bg)', color: 'var(--text-dark)', fontSize: '0.9rem', resize: 'vertical', marginBottom: '1rem' }}
                 />
                 <button className="btn" onClick={handleOrder} style={{ width: '100%', background: '#25D366', color: 'white', border: 'none', fontSize: '1rem', padding: '1rem' }}>
                   {sent ? '✨ Opening WhatsApp...' : '🛒 Order on WhatsApp'}

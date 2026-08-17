@@ -21,7 +21,7 @@ const QuickViewModal = ({ product, onClose }) => {
         </p>
         
         <div style={{ display: 'flex', gap: '1rem' }}>
-          <button className="btn" style={{ flex: 1 }} onClick={() => { addToCart(product); onClose(); }}>Add to Cart ✨</button>
+          <button className="btn" style={{ flex: 1 }} onClick={() => { addToCart(product); onClose(); }}>Add to Cart</button>
         </div>
       </div>
     </div>

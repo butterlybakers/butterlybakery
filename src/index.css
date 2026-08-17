@@ -7,8 +7,8 @@
   --bg-color: #FFFFFF; /* Pure White */
   --text-dark: #1A3A30; /* Very dark green for text */
   --text-light: #FFFFFF;
-  --glass-bg: rgba(250, 249, 246, 0.7);
-  --glass-border: rgba(250, 249, 246, 0.4);
+  --glass-bg: #FFFFFF;
+  --glass-border: rgba(0, 0, 0, 0.05);
 }
 
 * {
@@ -27,17 +27,9 @@
   color: #FFF8E7;
 }
 
-/* Custom Minimal Scrollbar */
+/* Custom Minimal Scrollbar Removed */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--accent);
-  border-radius: 10px;
+  display: none;
 }
 
 /* Butterfly Horizontal Progress Bar */
@@ -57,7 +49,7 @@
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   width: 0%;
   position: relative;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0;
   transition: width 0.1s;
 }
 
@@ -78,7 +70,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Cinzel', serif;
   background-color: var(--bg-color);
   color: var(--text-dark);
   line-height: 1.8;
@@ -113,7 +105,7 @@ header.scrolled {
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -225,8 +217,9 @@ main {
 }
 
 .hero p {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-dark); /* Dark text for readability */
   letter-spacing: 1px;
   margin-bottom: 2.5rem;
@@ -237,10 +230,10 @@ main {
 .btn {
   display: inline-block;
   padding: 1rem 3rem;
-  background: linear-gradient(135deg, var(--secondary), var(--accent));
+  background: var(--primary);
   color: white;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 0;
   font-weight: 600;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -252,28 +245,15 @@ main {
   z-index: 1;
 }
 
-.btn::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(135deg, var(--accent), var(--secondary));
-  z-index: -1;
-  transition: opacity 0.4s ease;
-  opacity: 0;
-}
-
 .btn:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(181, 101, 118, 0.4);
-}
-
-.btn:hover::before {
-  opacity: 1;
+  background: var(--secondary);
 }
 
 /* Sections */
 .section-container {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 5rem 2rem;
 }
@@ -294,7 +274,7 @@ main {
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 /* Floating Image Product Cards */
@@ -564,29 +544,6 @@ footer p {
   transform: scale(1.1) rotate(-10deg);
 }
 
-/* Dark Mode */
-body.dark-mode {
-  --bg-color: #121A16; /* Very dark green-tinted black */
-  --text-dark: #FFF8E7; /* Creamish white */
-  --text-light: #121A16;
-  --glass-bg: rgba(18, 26, 22, 0.85);
-  --glass-border: rgba(249, 160, 63, 0.1);
-}
-body.dark-mode .product-card,
-body.dark-mode .review-card,
-body.dark-mode .contact-info,
-body.dark-mode .contact-form,
-body.dark-mode .step-card {
-  background: rgba(30, 30, 45, 0.5);
-  border-color: rgba(255,255,255,0.05);
-}
-body.dark-mode p {
-  color: #bbb;
-}
-body.dark-mode .bg-blob {
-  opacity: 0.2;
-}
-
 /* Responsive Header */
 .hamburger {
   display: none;
@@ -795,7 +752,7 @@ body.dark-mode .bg-blob {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   width: 30px; height: 30px;
-  border-radius: 5px;
+  border-radius: 0;
   color: var(--text-dark);
 }
 .cart-item-actions .remove-btn { background: #ff4d4d; color: white; border: none; }
@@ -855,7 +812,7 @@ body.dark-mode .bg-blob {
 .book-stage {
   background: linear-gradient(135deg, #EADBC8 0%, #DBC4AB 50%, #CBB08C 100%);
   border: 2px solid #B89C74;
-  border-radius: 30px;
+  border-radius: 0;
   padding: 3rem 5.5rem;
   box-shadow:
     0 15px 40px rgba(100, 75, 45, 0.22),
@@ -909,5 +866,4 @@ body.dark-mode .bg-blob {
   border-bottom: 1px solid var(--glass-border);
 }
 
-* { font-family: 'Comic Sans MS', 'Comic Sans', cursive !important; }
 

@@ -40,7 +40,7 @@ const Home = () => {
 
   // Select up to 4 products from the current category
   const currentCategory = validCategories[currentCategoryIndex];
-  const featuredProducts = currentCategory ? currentCategory.products.slice(0, 4) : [];
+  const featuredProducts = currentCategory ? currentCategory.products.slice(0, 6) : [];
 
   return (
     <>
@@ -80,15 +80,15 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="section-container" style={{ background: 'rgba(255,255,255,0.4)', borderRadius: '40px', marginBottom: '5rem', padding: '5rem 2rem' }}>
+      <section className="section-container" style={{ background: 'rgba(255,255,255,0.4)', borderRadius: '0', marginBottom: '5rem', padding: '5rem 2rem' }}>
         <h2 className="section-title" data-aos="fade-up">Featured Delights</h2>
         <h3 style={{ textAlign: 'center', color: 'var(--primary)', marginBottom: '3rem', fontSize: '1.5rem', fontWeight: 'bold' }} data-aos="fade-up">
           {currentCategory ? currentCategory.categoryName : ''}
         </h3>
         <div className="products-grid">
           {featuredProducts.map((product, i) => (
-            <div key={product.id} className="product-card" data-aos="fade-up" data-aos-delay={i * 150} style={{ position: 'relative', overflow: 'hidden' }}>
-              <div className="product-img-wrapper" style={{ backgroundImage: `url(${product.image})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '15px 15px 0 0' }}>
+            <div key={product.id} className="product-card" data-aos="fade-up" data-aos-delay={i * 150} style={{ position: 'relative', overflow: 'visible' }}>
+              <div className="product-img-wrapper" style={{ backgroundImage: `url(${product.image})`, backgroundSize: 'cover', backgroundPosition: 'center', borderRadius: '0' }}>
                 <div className="product-card-overlay">
                   <button className="btn" style={{ padding: '0.5rem 1.2rem', fontSize: '0.85rem' }} onClick={() => setSelectedProduct(product)}>View Details</button>
                 </div>
