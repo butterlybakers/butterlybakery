@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import Cake3D from '../components/Cake3D';
 import TextReveal from '../components/TextReveal';
 import MagneticButton from '../components/MagneticButton';
-import AnimatedButterfly from '../components/AnimatedButterfly';
 import QuickViewModal from '../components/QuickViewModal';
-import FlavorOracle from '../components/FlavorOracle';
 import GoogleReviews from '../components/GoogleReviews';
 
 import { useCart } from '../context/CartContext';

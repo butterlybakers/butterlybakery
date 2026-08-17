@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const TextReveal = ({ text, delay = 0, className, as: Component = 'h1' }) => {
+const TextReveal = ({ text, delay = 0, className }) => {
   // Split text into words, then words into characters for fluid animation
-  const letters = Array.from(text);
+  const characters = text.split('');
 
   const container = {
     hidden: { opacity: 0 },
-    visible: (i = 1) => ({
+    visible: () => ({
       opacity: 1,
       transition: { staggerChildren: 0.05, delayChildren: delay }
     })

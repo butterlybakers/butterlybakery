@@ -5,7 +5,6 @@ import AOS from 'aos';
 import { Toaster } from 'react-hot-toast';
 import SidebarCart from './SidebarCart';
 import { useCart } from '../context/CartContext';
-import { AnimatePresence, motion } from 'framer-motion';
 
 
 const Layout = () => {
@@ -14,9 +13,7 @@ const Layout = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const cursorDotRef = React.useRef(null);
-  const cursorRingRef = React.useRef(null);
-  const cursorExpand = false;
+
   const location = useLocation();
   const { totalItems, setIsCartOpen } = useCart();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import AnimatedButterfly from '../components/AnimatedButterfly';
 
 
 const bakers = [

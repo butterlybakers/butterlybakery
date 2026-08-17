@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useCart } from '../context/CartContext';
 import AnimatedButterfly from './AnimatedButterfly';
-import Confetti from 'react-confetti';
-
 const SidebarCart = () => {
   const { cartItems, isCartOpen, setIsCartOpen, removeFromCart, updateQuantity, cartTotal } = useCart();
   const [showConfetti, setShowConfetti] = useState(false);

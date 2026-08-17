@@ -2,7 +2,6 @@ import React, { useState, useMemo, useRef } from 'react';
 import QuickViewModal from '../components/QuickViewModal';
 import { useCart } from '../context/CartContext';
 import { menuCategories } from '../menuData';
-import AnimatedButterfly from '../components/AnimatedButterfly';
 
 const Products = () => {
   const { addToCart } = useCart();
