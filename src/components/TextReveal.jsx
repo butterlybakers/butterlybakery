@@ -42,7 +42,7 @@ const TextReveal = ({ text, delay = 0, className }) => {
       animate="visible"
       className={className}
     >
-      {letters.map((letter, index) => (
+      {characters.map((letter, index) => (
         <motion.span variants={child} key={index} style={{ display: 'inline-block' }}>
           {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
