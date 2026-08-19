@@ -80,9 +80,6 @@ const Customizations = () => {
 
     const text = `Hi Butterly Bakery! 🎂 I'd like to order a Custom Cake!\n\n🍰 Base: ${base}\n🎀 Frosting: ${frosting}\n📏 Size: ${size}\n💰 Estimated Price: ₹${price}\n\n${message ? `📝 Special Message: "${message}"\n\n` : ''}Please confirm my order! ✨`;
     
-    const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=magic-wand-6214.mp3');
-    audio.volume = 0.4;
-    audio.play().catch(() => {});
     setSent(true);
     setTimeout(() => {
       window.location.href = `https://wa.me/919876543210?text=${encodeURIComponent(text)}`;

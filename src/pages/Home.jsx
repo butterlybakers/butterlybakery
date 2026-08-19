@@ -26,10 +26,6 @@ const Home = () => {
   }, [validCategories.length]);
 
   const handleSurpriseMe = () => {
-    const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=magic-wand-6214.mp3');
-    audio.volume = 0.4;
-    audio.play().catch(() => {});
-    
     // Pick a random category, then a random product from it
     const randomCategory = validCategories[Math.floor(Math.random() * validCategories.length)];
     const randomProduct = randomCategory.products[Math.floor(Math.random() * randomCategory.products.length)];

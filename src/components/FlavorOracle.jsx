@@ -72,9 +72,6 @@ const FlavorOracle = () => {
   const { addToCart } = useCart();
 
   const handleSelectMood = (mood) => {
-    const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=magic-wand-6214.mp3');
-    audio.volume = 0.3;
-    audio.play().catch(() => {});
 
     setIsFlipped(false);
     setTimeout(() => {

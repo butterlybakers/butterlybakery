@@ -20,10 +20,6 @@ export const GameProvider = ({ children }) => {
         }
         return newFound;
       });
-      // Play a magical sound
-      const audio = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3');
-      audio.volume = 0.5;
-      audio.play().catch(() => {});
     }
   };
 

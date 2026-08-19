@@ -99,12 +99,12 @@ const Layout = () => {
 
           <nav style={{ marginTop: '10px' }} className={isMobileMenuOpen ? 'mobile-menu-open' : ''}>
             <ul onClick={() => setIsMobileMenuOpen(false)}>
-              <li><NavLink to="/" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Home</NavLink></li>
-              <li><NavLink to="/products" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Products</NavLink></li>
-              <li><NavLink to="/customizations" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Custom Cakes</NavLink></li>
-              <li><NavLink to="/bulk-orders" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Bulk/Corporate</NavLink></li>
-              <li><NavLink to="/about" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>About</NavLink></li>
-              <li><NavLink to="/contact" onMouseEnter={() => { const a = new Audio('https://cdn.pixabay.com/download/audio/2022/03/10/audio_c8c8a73467.mp3?filename=pop-39222.mp3'); a.volume=0.1; a.play().catch(()=>{}); }}>Contact</NavLink></li>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/products">Products</NavLink></li>
+              <li><NavLink to="/customizations">Custom Cakes</NavLink></li>
+              <li><NavLink to="/bulk-orders">Bulk/Corporate</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink to="/contact">Contact</NavLink></li>
               <li style={{ display: 'flex', alignItems: 'center' }}>
                 <button 
                   style={{ background: 'none', border: 'none', cursor: 'pointer', position: 'relative', display: 'flex', alignItems: 'center' }}

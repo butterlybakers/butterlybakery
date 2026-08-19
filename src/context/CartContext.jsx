@@ -18,11 +18,6 @@ export const CartProvider = ({ children }) => {
       return [...prev, { ...product, quantity: 1 }];
     });
     
-    // Play magical sound here if audio is loaded
-    const audio = new Audio('https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3?filename=magic-wand-6214.mp3');
-    audio.volume = 0.3;
-    audio.play().catch(e => console.log('Audio play failed', e));
-
     toast.success(`Added ${product.name} to cart!`, {
       icon: '✨',
       style: { background: 'var(--glass-bg)', color: 'var(--text-dark)' }
