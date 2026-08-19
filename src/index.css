@@ -117,10 +117,11 @@ header.scrolled {
   margin-bottom: 0.5rem;
 }
 
-.logo-container img {
+.logo-container img, .header-logo {
   height: 90px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: drop-shadow(0 4px 10px rgba(181, 101, 118, 0.2));
+  filter: drop-shadow(0 4px 10px rgba(181, 101, 118, 0.2)) brightness(1.3);
+  object-fit: contain;
 }
 
 header.scrolled .logo-container img {
@@ -177,10 +178,11 @@ main {
 /* Premium Hero Section with Parallax */
 .hero {
   position: relative;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   background-image: url('/images/pattern.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -195,17 +197,24 @@ main {
 /* Overlay removed per user request so the pattern shows clearly */
 
 .hero-content {
+  flex: 1 1 300px;
   position: relative;
-  z-index: 1;
-  text-align: center;
-  max-width: 800px;
+  z-index: 10;
+  text-align: left;
+  max-width: 600px;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
-  border-radius: 0; /* Sharp edges as requested */
+  border-radius: 0;
   box-shadow: 0 15px 35px rgba(0,0,0,0.1);
   color: var(--text-dark);
+}
+
+.hero-model {
+  flex: 1 1 400px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -610,29 +619,99 @@ footer p {
     transform: translateX(0);
   }
 
+  header {
+    padding: 15px 0 10px; /* Reduce top padding on mobile */
+  }
+
   .header-container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; /* Center the logo */
+    align-items: center;
     padding: 0 1rem;
-    height: 80px;
+    height: auto; /* Let it grow with the larger logo */
+    min-height: 100px;
+    position: relative;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px; /* Keep hamburger on the right */
+    top: 35px;
   }
 
   .logo-container {
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
-  .logo-container img {
-    height: 50px;
+  .logo-container img, .header-logo {
+    height: 110px !important; /* Made even bigger */
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+    transform: none !important;
+  }
+  
+  .header-logo.scrolled-logo {
+    height: 70px !important; /* Slightly bigger when scrolled */
+    margin-top: 5px !important;
   }
   
   .logo-container h2 {
     font-size: 1rem !important;
   }
 
-  main { padding-top: 100px; }
-  .hero { margin: 0 1rem 3rem 1rem; height: 60vh; }
+  main { padding-top: 180px; } /* Increased further to prevent hiding headings like About section */
+  
+  /* 9:16 optimized mobile hero */
+  .hero { 
+    margin: 0; 
+    width: 100%; /* Ensure it takes full width */
+    height: 100vh;
+    min-height: 100svh;
+    padding-top: 180px; /* Clear the header */
+    flex-direction: column; /* Stack naturally */
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0;
+  }
+  
+  .hero-content {
+    align-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex: none;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    width: 92%;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 10;
+  }
+  
+  .hero-model {
+    flex: none;
+    width: 100%;
+    height: 40vh;
+    z-index: 1;
+    margin-top: -20px; /* Slight overlap for depth */
+  }
+  
   .hero h1 { font-size: 2.2rem; }
-  .hero p { font-size: 1rem; }
+  .hero-subtitle { font-size: 1.1rem; margin-top: 1rem; }
+  
+  .hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
   
   .section-container {
     padding: 3rem 1rem !important;

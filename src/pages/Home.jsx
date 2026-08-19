@@ -47,22 +47,22 @@ const Home = () => {
 
 
       {/* Hero Section */}
-      <section className="hero" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-        <div className="hero-content" style={{ flex: '1 1 300px' }}>
+      <section className="hero">
+        <div className="hero-content">
           <TextReveal text="The Magic of Baking" className="hero-title" delay={0.2} />
-          <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" style={{ marginTop: '1rem' }}>
+          <p className="hero-subtitle" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
             Experience Pastries that melt in your mouth, crafted with love and a sprinkle of joy.
           </p>
-          <div data-aos="zoom-in" data-aos-delay="800" style={{ marginTop: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-            <MagneticButton className="btn" style={{ background: '#e89e25', color: '#ffffff' }} onClick={() => window.location.href = '/products'}>
+          <div className="hero-actions" data-aos="zoom-in" data-aos-delay="800">
+            <MagneticButton className="btn btn-primary" onClick={() => window.location.href = '/products'}>
               Explore Menu
             </MagneticButton>
-            <button className="btn" onClick={handleSurpriseMe} style={{ background: '#ffffff', border: 'none', color: '#e89e25', animation: 'pulse 2s ease-in-out infinite' }}>
+            <button className="btn btn-secondary pulse-animation" onClick={handleSurpriseMe}>
               Surprise Me
             </button>
           </div>
         </div>
-        <div style={{ flex: '1 1 400px' }} data-aos="fade-in" data-aos-duration="2000">
+        <div className="hero-model" data-aos="fade-in" data-aos-duration="2000">
           <Cake3D />
         </div>
       </section>

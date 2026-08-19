@@ -80,20 +80,12 @@ const Layout = () => {
       <header id="main-header" className={scrolled ? 'scrolled' : ''}>
         <div className="header-container">
           <div className="logo-container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '5px' }}>
-            <NavLink to="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <NavLink to="/" className="logo-link" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               {/* Logo Image */}
               <img 
                 src="/images/butterly-logo-main.png" 
                 alt="Butterly Bakery Logo" 
-                style={{ 
-                  height: scrolled ? '80px' : '120px', 
-                  transition: 'height 0.4s ease, transform 0.4s ease',
-                  objectFit: 'contain',
-                  marginTop: scrolled ? '0' : '10px',
-                  marginBottom: scrolled ? '0' : '45px',
-                  transform: scrolled ? 'scale(1.2)' : 'scale(1.8)',
-                  filter: 'brightness(1.3)'
-                }} 
+                className={`header-logo ${scrolled ? 'scrolled-logo' : ''}`}
               />
             </NavLink>
           </div>
