@@ -183,8 +183,12 @@ const Products = () => {
         {displayProducts.length > 0 ? (
           displayProducts.map((product, i) => (
             <div key={`${product.id}-${i}`} className="product-card" data-aos="fade-up" style={{ position: 'relative', overflow: 'visible' }}>
-              <div className="product-img-wrapper" style={{ backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', borderRadius: '0' }}>
-                <p style={{ color: '#888', fontStyle: 'italic', padding: '1rem', textAlign: 'center' }}>{product.image}</p>
+              <div className="product-img-wrapper" style={{ backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '200px', borderRadius: '0', overflow: 'hidden' }}>
+                {product.image.startsWith('/') ? (
+                  <img src={product.image} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                ) : (
+                  <p style={{ color: '#888', fontStyle: 'italic', padding: '1rem', textAlign: 'center' }}>{product.image}</p>
+                )}
               </div>
               <div className="product-info">
                 <span style={{ fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--primary)', fontWeight: 'bold' }}>

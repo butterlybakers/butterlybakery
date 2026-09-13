@@ -14,8 +14,8 @@ export const menuCategories = [
       { id: 'dt5-eggless', name: 'Choco Hazelnut (Eggless)', price: 1300, description: 'Decadent eggless chocolate cake infused with premium roasted hazelnuts.', image: 'product image will come here' },
       { id: 'dt6-egg', name: 'Fresh Fruit (Egg)', price: 1400, description: 'Light vanilla sponge layered with an assortment of fresh seasonal fruits.', image: 'product image will come here' },
       { id: 'dt6-eggless', name: 'Fresh Fruit (Eggless)', price: 1500, description: 'Light eggless vanilla sponge layered with an assortment of fresh seasonal fruits.', image: 'product image will come here' },
-      { id: 'dt7-egg', name: 'Tiramisu (Egg)', price: 1400, description: 'Classic Italian coffee-flavored dessert cake with mascarpone cream.', image: 'product image will come here' },
-      { id: 'dt7-eggless', name: 'Tiramisu (Eggless)', price: 1500, description: 'Classic Italian eggless coffee-flavored dessert cake with mascarpone cream.', image: 'product image will come here' },
+      { id: 'dt7-egg', name: 'Tiramisu (Egg)', price: 1400, description: 'Classic Italian coffee-flavored dessert cake with mascarpone cream.', image: '/images/products/tiramissu.webp' },
+      { id: 'dt7-eggless', name: 'Tiramisu (Eggless)', price: 1500, description: 'Classic Italian eggless coffee-flavored dessert cake with mascarpone cream.', image: '/images/products/tiramissu.webp' },
     ]
   },
   {
@@ -33,8 +33,8 @@ export const menuCategories = [
       { id: 'dr5-eggless', name: 'Choco Hazelnut (Eggless)', price: 1200, description: 'Rich chocolate and hazelnut combined in a smooth eggless round cake.', image: 'product image will come here' },
       { id: 'dr6-egg', name: 'Fresh Fruit (Egg)', price: 1200, description: 'A vibrant round cake topped with fresh exotic fruits.', image: 'product image will come here' },
       { id: 'dr6-eggless', name: 'Fresh Fruit (Eggless)', price: 1300, description: 'A vibrant eggless round cake topped with fresh exotic fruits.', image: 'product image will come here' },
-      { id: 'dr7-egg', name: 'Tiramisu (Egg)', price: 1300, description: 'Coffee-soaked sponge layers with a dusting of cocoa.', image: 'product image will come here' },
-      { id: 'dr7-eggless', name: 'Tiramisu (Eggless)', price: 1400, description: 'Eggless coffee-soaked sponge layers with a dusting of cocoa.', image: 'product image will come here' },
+      { id: 'dr7-egg', name: 'Tiramisu (Egg)', price: 1300, description: 'Coffee-soaked sponge layers with a dusting of cocoa.', image: '/images/products/tiramissu.webp' },
+      { id: 'dr7-eggless', name: 'Tiramisu (Eggless)', price: 1400, description: 'Eggless coffee-soaked sponge layers with a dusting of cocoa.', image: '/images/products/tiramissu.webp' },
     ]
   },
   {
@@ -48,8 +48,8 @@ export const menuCategories = [
       { id: 'bc3-eggless', name: 'White Forest Bento (Eggless)', price: 370, description: 'Bite-sized eggless white forest goodness.', image: 'product image will come here' },
       { id: 'bc4-egg', name: 'Strawberry Bento (Egg)', price: 320, description: 'Sweet strawberry flavored mini cake.', image: 'product image will come here' },
       { id: 'bc4-eggless', name: 'Strawberry Bento (Eggless)', price: 340, description: 'Sweet eggless strawberry flavored mini cake.', image: 'product image will come here' },
-      { id: 'bc5-egg', name: 'Mango Bento (Egg)', price: 320, description: 'A tropical delight in a bento box.', image: 'product image will come here' },
-      { id: 'bc5-eggless', name: 'Mango Bento (Eggless)', price: 340, description: 'An eggless tropical delight in a bento box.', image: 'product image will come here' },
+      { id: 'bc5-egg', name: 'Mango Bento (Egg)', price: 320, description: 'A tropical delight in a bento box.', image: '/images/products/mango-cake.webp' },
+      { id: 'bc5-eggless', name: 'Mango Bento (Eggless)', price: 340, description: 'An eggless tropical delight in a bento box.', image: '/images/products/mango-cake.webp' },
       { id: 'bc6-egg', name: 'Vanilla Bento (Egg)', price: 320, description: 'Classic vanilla cake packed in a cute box.', image: 'product image will come here' },
       { id: 'bc6-eggless', name: 'Vanilla Bento (Eggless)', price: 340, description: 'Classic eggless vanilla cake packed in a cute box.', image: 'product image will come here' },
       { id: 'bc7-egg', name: 'Blueberry Bento (Egg)', price: 350, description: 'Rich blueberry compote layered in a mini sponge.', image: 'product image will come here' },
@@ -64,8 +64,8 @@ export const menuCategories = [
       { id: 'bc11-eggless', name: 'Irish Coffee Bento (Eggless)', price: 400, description: 'Eggless coffee lovers rejoice with this mini Irish treat.', image: 'product image will come here' },
       { id: 'bc12-egg', name: 'Oreo Chocolate Bento (Egg)', price: 380, description: 'Oreo chunks loaded into a mini chocolate cake.', image: 'product image will come here' },
       { id: 'bc12-eggless', name: 'Oreo Chocolate Bento (Eggless)', price: 400, description: 'Oreo chunks loaded into an eggless mini chocolate cake.', image: 'product image will come here' },
-      { id: 'bc13-egg', name: 'Fresh Mango Bento (Egg)', price: 400, description: 'Fresh seasonal mango pieces on top.', image: 'product image will come here' },
-      { id: 'bc13-eggless', name: 'Fresh Mango Bento (Eggless)', price: 420, description: 'Fresh seasonal mango pieces on top of an eggless base.', image: 'product image will come here' },
+      { id: 'bc13-egg', name: 'Fresh Mango Bento (Egg)', price: 400, description: 'Fresh seasonal mango pieces on top.', image: '/images/products/mango-cake.webp' },
+      { id: 'bc13-eggless', name: 'Fresh Mango Bento (Eggless)', price: 420, description: 'Fresh seasonal mango pieces on top of an eggless base.', image: '/images/products/mango-cake.webp' },
       { id: 'bc14-egg', name: 'Belgian Truffle Bento (Egg)', price: 420, description: 'Premium Belgian chocolate made bite-sized.', image: 'product image will come here' },
       { id: 'bc14-eggless', name: 'Belgian Truffle Bento (Eggless)', price: 440, description: 'Premium eggless Belgian chocolate made bite-sized.', image: 'product image will come here' },
       { id: 'bc15-egg', name: 'Choco Strawberry Bento (Egg)', price: 420, description: 'The classic combo of chocolate and strawberries.', image: 'product image will come here' },
@@ -91,12 +91,14 @@ export const menuCategories = [
     products: [
       { id: 'bu1', name: 'Masala Bun', price: 15, description: 'Savory bun spiced with authentic Indian masala.', image: 'product image will come here' },
       { id: 'bu2', name: 'Sweet Bun', price: 15, description: 'Soft, slightly sweet bun filled with tutti-frutti bits.', image: 'product image will come here' },
+      { id: 'bu3', name: 'Korean Bun', price: 80, description: 'Delicious Korean style cream cheese garlic bun.', image: '/images/products/korean-bun.webp' },
+      { id: 'bu4', name: 'Single Korean Bun', price: 50, description: 'A single portion of our famous Korean bun.', image: '/images/products/single-korean-bun.webp' },
     ]
   },
   {
     categoryName: 'Cup Cakes',
     products: [
-      { id: 'cu1', name: 'Belgium Chocolate Cup Cake', price: 60, description: 'Rich Belgian chocolate sponge topped with silky frosting.', image: 'product image will come here' },
+      { id: 'cu1', name: 'Belgium Chocolate Cup Cake', price: 60, description: 'Rich Belgian chocolate sponge topped with silky frosting.', image: '/images/products/belgium-chocolate-cupcake.webp' },
       { id: 'cu2', name: 'Vanilla Cup Cake', price: 50, description: 'Classic vanilla cupcake with sweet buttercream.', image: 'product image will come here' },
       { id: 'cu3', name: 'Chocolate Butter Cream Cup Cake', price: 60, description: 'Chocolate cupcake frosted with rich chocolate buttercream.', image: 'product image will come here' },
       { id: 'cu4', name: 'Hazelnut Cup Cake', price: 70, description: 'Nutty hazelnut cupcake topped with a whole hazelnut.', image: 'product image will come here' },
@@ -150,6 +152,7 @@ export const menuCategories = [
       { id: 'cc17-1kg-eggless', name: 'Biscoff Cake (1 kg, Eggless)', price: 1200, description: 'Eggless Lotus Biscoff masterpiece.', image: 'product image will come here' },
       { id: 'cc17-500g-egg', name: 'Biscoff Cake (500g, Egg)', price: 625, description: 'Lotus Biscoff cookies and spread crafted into a masterpiece.', image: 'product image will come here' },
       { id: 'cc17-500g-eggless', name: 'Biscoff Cake (500g, Eggless)', price: 675, description: 'Eggless Lotus Biscoff masterpiece.', image: 'product image will come here' },
+      { id: 'cc20-1kg-egg', name: 'Coffee Crunch Cake (1 kg, Egg)', price: 900, description: 'Coffee flavored cake with a crunchy texture.', image: '/images/products/coffee-crunch.webp' },
     ]
   },
   {
@@ -161,6 +164,7 @@ export const menuCategories = [
       { id: 'do4', name: 'Custard Doughnut', price: 99, description: 'Soft doughnut filled with creamy vanilla custard.', image: 'product image will come here' },
       { id: 'do5', name: 'Hazelnut Doughnut', price: 99, description: 'Topped with hazelnut chocolate and crunchy nuts.', image: 'product image will come here' },
       { id: 'do6', name: 'Chocolate Doughnut', price: 60, description: 'Classic chocolate glazed ring doughnut.', image: 'product image will come here' },
+      { id: 'do7', name: 'Hazelnut Bombolini', price: 110, description: 'Italian style stuffed doughnut filled with hazelnut cream.', image: '/images/products/hazelnut-bombolini.webp' },
     ]
   },
   {
@@ -235,9 +239,48 @@ export const menuCategories = [
   {
     categoryName: 'Tubs',
     products: [
-      { id: 'tu1', name: 'Classic Tres Leches', price: 240, description: 'A mini tub of our famous three-milk soaked sponge.', image: 'product image will come here' },
+      { id: 'tu1', name: 'Classic Tres Leches', price: 240, description: 'A mini tub of our famous three-milk soaked sponge.', image: '/images/products/classic-tres-leches.webp' },
       { id: 'tu2', name: 'Biscoff Tres Leches', price: 249, description: 'Tres leches infused with rich Biscoff flavor.', image: 'product image will come here' },
-      { id: 'tu7', name: 'Death By Chocolate', price: 249, description: 'Multiple layers of extreme chocolate madness in a tub.', image: 'product image will come here' },
+      { id: 'tu7', name: 'Death By Chocolate', price: 249, description: 'Multiple layers of extreme chocolate madness in a tub.', image: '/images/products/dbc.webp' },
+      { id: 'tu3', name: 'Coffee Tres Leches', price: 249, description: 'Coffee flavored sponge soaked in our signature three-milk blend.', image: '/images/products/coffee-tres-leches.webp' },
+      { id: 'tu4', name: 'Hazelnut Tres Leches', price: 259, description: 'Hazelnut infused tres leches for a nutty delight.', image: '/images/products/hazelnut-tres-leches.webp' },
+    ]
+  },
+  {
+    categoryName: 'Brownies',
+    products: [
+      { id: 'bw1', name: 'Biscoff Brownie', price: 120, description: 'Fudgy brownie topped with Lotus Biscoff spread and biscuit.', image: '/images/products/biscoff-brownie.webp' },
+      { id: 'bw2', name: 'Hazelnut Brownie', price: 130, description: 'Rich chocolate brownie packed with toasted hazelnuts.', image: '/images/products/hazelnut-brownie.webp' },
+      { id: 'bw3', name: 'Kunafa Brownie', price: 150, description: 'A unique fusion of crispy kunafa and fudgy chocolate brownie.', image: '/images/products/kunafa-brownie.webp' },
+      { id: 'bw4', name: 'Sizzling Brownie', price: 180, description: 'Classic brownie served on a hot sizzler with chocolate sauce.', image: '/images/products/sizziling-brownie.webp' },
+    ]
+  },
+  {
+    categoryName: 'Custom Model Cakes',
+    products: [
+      { id: 'mc1', name: 'Animals Model Cake', price: 2500, description: 'Beautifully crafted custom cake with cute fondant animal models.', image: '/images/products/animals-model-cake.webp' },
+      { id: 'mc2', name: 'Olaf Model Cake', price: 2500, description: 'Frozen themed cake featuring an edible Olaf model.', image: '/images/products/olaf-model.webp' },
+      { id: 'mc3', name: 'Unicorn Model Cake', price: 2500, description: 'Magical unicorn themed cake with vibrant colors.', image: '/images/products/unicorn-model-cake.webp' },
+    ]
+  },
+  {
+    categoryName: 'Puddings',
+    products: [
+      { id: 'pd1', name: 'Banana Pudding (Eggless)', price: 150, description: 'Creamy and comforting eggless banana pudding.', image: '/images/products/banana-pudding-eggless.webp' },
+    ]
+  },
+  {
+    categoryName: 'Specials & Gallery',
+    products: [
+      { id: 'sp1', name: 'Special Item 1', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04418.webp' },
+      { id: 'sp2', name: 'Special Item 2', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04706.webp' },
+      { id: 'sp3', name: 'Special Item 3', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04710.webp' },
+      { id: 'sp4', name: 'Special Item 4', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04713.webp' },
+      { id: 'sp5', name: 'Special Item 5', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04719.webp' },
+      { id: 'sp6', name: 'Special Item 6', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04722.webp' },
+      { id: 'sp7', name: 'Special Item 7', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04725.webp' },
+      { id: 'sp8', name: 'Special Item 8', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04728.webp' },
+      { id: 'sp9', name: 'Special Item 9', price: 500, description: 'A special surprise dessert.', image: '/images/products/dsc04733.webp' },
     ]
   }
 ];
