@@ -1064,6 +1064,30 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links ul {
+    align-items: center;
+  }
+
+  .philosophy-container, .home-products-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    justify-content: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .philosophy-container > div, .home-products-grid > .product-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: center;
   }
 
   .nav-arrow {

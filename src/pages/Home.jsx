@@ -85,7 +85,7 @@ const Home = () => {
         <p className="section-subtitle" data-aos="fade-up" data-aos-delay="100">
           We believe that exceptional pastry requires patience, precision, and the finest ingredients available. We do not take shortcuts.
         </p>
-        <div data-aos="fade-up" data-aos-delay="200" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '900px', margin: '0 auto' }}>
+        <div className="philosophy-container" data-aos="fade-up" data-aos-delay="200" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '900px', margin: '0 auto' }}>
           <div style={{ flex: '1 1 250px', padding: '2.5rem 2rem', background: 'var(--bg-warm)', borderRadius: 'var(--radius-lg)', textAlign: 'center' }}>
             <h4 style={{ marginBottom: '0.75rem', fontSize: '1.1rem' }}>Sourced with Care</h4>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>We partner with local millers and ethical producers to ensure every ingredient meets our exacting standards.</p>
@@ -112,7 +112,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="products-grid" style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div className="products-grid home-products-grid" style={{ maxWidth: '1200px', margin: '0 auto' }}>
             {featuredProducts.map((product, i) => (
               <div key={product.id} className="product-card" data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="product-img-wrapper" style={product.image.startsWith('/') ? {} : { display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--bg-warm)' }}>
