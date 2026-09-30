@@ -36,10 +36,6 @@ const Layout = () => {
 
   return (
     <>
-      {/* Scroll Progress */}
-      <div className="scroll-progress-container">
-        <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
-      </div>
 
       {/* Header */}
       <header className={scrolled ? 'scrolled' : ''}>
