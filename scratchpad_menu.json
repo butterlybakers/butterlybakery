@@ -1,0 +1,132 @@
+[
+  {
+    "Product": "Pepsi ",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Thumps Up",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Coca Cola",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Coca Cola OG",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Coca Cola 0 Sugar",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Diet Coke",
+    "Details": 1,
+    "Price (₹)": 50
+  },
+  {
+    "Product": "Sprite",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Water 500ml",
+    "Details": 1,
+    "Price (₹)": 10
+  },
+  {
+    "Product": "Water 1L",
+    "Details": 1,
+    "Price (₹)": 20
+  },
+  {
+    "Product": "Water Small",
+    "Details": 1,
+    "Price (₹)": 6
+  },
+  {
+    "Product": "Monster Energy Ultra",
+    "Details": 1,
+    "Price (₹)": 125
+  },
+  {
+    "Product": "Monster Energy",
+    "Details": 1,
+    "Price (₹)": 125
+  },
+  {
+    "Product": "Red Bull",
+    "Details": 1,
+    "Price (₹)": 125
+  },
+  {
+    "Product": "Minute Maid: Pulpy Orange",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Lychee",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Black Currant",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Orange",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Apple",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Mango",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Pink Gauva",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Pineapple",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Watermelon",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Mogu Mogu: Strawberry",
+    "Details": 1,
+    "Price (₹)": 70
+  },
+  {
+    "Product": "Shila Kick: Grape",
+    "Details": 1,
+    "Price (₹)": 100
+  },
+  {
+    "Product": "Shila Kick: Tamarind",
+    "Details": 1,
+    "Price (₹)": 100
+  },
+  {
+    "Product": "Hana: Fizz Jeera",
+    "Details": 1,
+    "Price (₹)": 20
+  }
+]
