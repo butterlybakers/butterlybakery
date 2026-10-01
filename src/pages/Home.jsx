@@ -108,7 +108,7 @@ const Home = () => {
           <span className="section-tag" data-aos="fade-up">Glimpse Inside</span>
           <h2 className="section-title" data-aos="fade-up">Behind the Scenes</h2>
         </div>
-        <VideoCarousel videos={['/whapp_video.mp4', '/video_01.mov']} />
+        <VideoCarousel videos={['https://res.cloudinary.com/cvy4k7qy/video/upload/v1790834222/whapp_video.mp4', 'https://res.cloudinary.com/cvy4k7qy/video/upload/v1790834426/video_01.mp4']} />
       </section>
 
       {/* Featured Products */}
