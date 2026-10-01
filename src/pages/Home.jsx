@@ -108,7 +108,7 @@ const Home = () => {
           <span className="section-tag" data-aos="fade-up">Glimpse Inside</span>
           <h2 className="section-title" data-aos="fade-up">Behind the Scenes</h2>
         </div>
-        <VideoCarousel videos={['/whapp video.mp4', '/video 01.mov']} />
+        <VideoCarousel videos={['/whapp_video.mp4', '/video_01.mov']} />
       </section>
 
       {/* Featured Products */}
