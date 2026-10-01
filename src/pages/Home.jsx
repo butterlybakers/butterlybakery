@@ -5,6 +5,7 @@ import QuickViewModal from '../components/QuickViewModal';
 import GoogleReviews from '../components/GoogleReviews';
 import { useCart } from '../context/CartContext';
 import { menuCategories } from '../menuData';
+import VideoCarousel from '../components/VideoCarousel';
 
 const Home = () => {
   const { addToCart } = useCart();
@@ -40,7 +41,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <img src="/images/home_hero.jpg" alt="Freshly baked goods" />
+          <VideoCarousel videos={['/whapp video.mp4', '/video 01.mov']} />
         </div>
         <div className="hero-inner">
           <div className="hero-content" data-aos="fade-up">
