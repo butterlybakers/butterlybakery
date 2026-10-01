@@ -11,12 +11,14 @@ const VideoCarousel = ({ videos }) => {
           <div key={index} className="video-card">
             <video
               className="card-video"
-              src={video}
               muted
               playsInline
               autoPlay
               loop
-            />
+            >
+              <source src={video} />
+              Your browser does not support the video tag.
+            </video>
           </div>
         ))}
       </div>
