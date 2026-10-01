@@ -26,5 +26,3 @@ dist-ssr
 # Large Assets
 *.zip
 public/images/temp_unzip/
-public/*.mov
-public/*.mp4

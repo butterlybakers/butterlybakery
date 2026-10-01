@@ -41,7 +41,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <VideoCarousel videos={['/whapp video.mp4', '/video 01.mov']} />
+          <img src="/images/home_hero.jpg" alt="Freshly baked goods" />
         </div>
         <div className="hero-inner">
           <div className="hero-content" data-aos="fade-up">
@@ -100,6 +100,15 @@ const Home = () => {
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>We produce in small, deliberate quantities to guarantee that what reaches your table is at the peak of freshness.</p>
           </div>
         </div>
+      </section>
+
+      {/* Video Gallery Carousel */}
+      <section style={{ padding: '5rem 0', overflow: 'hidden' }}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <span className="section-tag" data-aos="fade-up">Glimpse Inside</span>
+          <h2 className="section-title" data-aos="fade-up">Behind the Scenes</h2>
+        </div>
+        <VideoCarousel videos={['/whapp video.mp4', '/video 01.mov']} />
       </section>
 
       {/* Featured Products */}
