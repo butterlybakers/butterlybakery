@@ -51,10 +51,13 @@ const Layout = () => {
           </div>
 
           {/* Hamburger */}
-          <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <div className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} style={{ position: 'relative' }}>
             <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
             <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
             <div className={`bar ${isMobileMenuOpen ? 'open' : ''}`}></div>
+            {totalItems > 0 && !isMobileMenuOpen && (
+              <span className="cart-badge hamburger-badge" style={{ position: 'absolute', top: '-8px', right: '-8px', width: '20px', height: '20px', fontSize: '0.7rem' }}>{totalItems}</span>
+            )}
           </div>
 
           <nav className={isMobileMenuOpen ? 'mobile-menu-open' : ''}>

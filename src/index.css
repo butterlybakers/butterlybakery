@@ -1061,19 +1061,9 @@ footer {
     gap: 1rem;
   }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
+  /* Removed .footer-grid mobile override to keep desktop layout */
 
-  .footer-social {
-    justify-content: center;
-  }
-
-  .footer-links ul {
-    align-items: center;
-  }
+  /* Keep desktop footer alignment */
 
   .philosophy-container, .home-products-grid {
     display: flex !important;
