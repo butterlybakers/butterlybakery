@@ -26,3 +26,4 @@ dist-ssr
 # Large Assets
 *.zip
 public/images/temp_unzip/
+public/images 2/

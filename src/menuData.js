@@ -236,14 +236,14 @@ export const menuCategories = [
         "name": "Egg Puff",
         "description": "Flaky and golden puff pastry packed with savory filling.",
         "price": 35,
-        "image": ""
+        "image": "/images/products/egg-puff.webp"
       },
       {
         "id": "c4_p2",
         "name": "Paneer Puff",
         "description": "Flaky and golden puff pastry packed with savory filling.",
         "price": 45,
-        "image": ""
+        "image": "/images/products/paneer-puff.webp"
       },
       {
         "id": "c4_p3",
@@ -260,30 +260,30 @@ export const menuCategories = [
       {
         "id": "c5_p0",
         "name": "Korean Garlic Cheese Bun",
-        "description": "A savory delight topped with melted cheese.",
+        "description": "Golden baked artisan brioche stuffed with sweetened cream cheese, garlic butter glaze, and aromatic herbs.",
         "price": 149,
-        "image": ""
+        "image": "/images/products/korean-bun.webp"
       },
       {
         "id": "c5_p1",
         "name": "Hazelnut Bomboloni",
-        "description": "Freshly baked soft and airy bun.",
+        "description": "Fluffy Italian sugared doughnuts filled with rich, creamy roasted hazelnut chocolate ganache.",
         "price": 110,
-        "image": ""
+        "image": "/images/products/hazelnut-bombolini.webp"
       },
       {
         "id": "c5_p2",
         "name": "Chocolate Bomboloni",
-        "description": "Soft and fluffy bun loaded with rich chocolate.",
+        "description": "Golden fried and sugar-dusted pillowy bomboloni filled with luscious chocolate cream.",
         "price": 99,
-        "image": ""
+        "image": "/images/products/chocolate-bombolini.webp"
       },
       {
         "id": "c5_p3",
         "name": "Maska Bun",
         "description": "Freshly baked soft and airy bun.",
         "price": 40,
-        "image": ""
+        "image": "/images/products/maska-bun.webp"
       },
       {
         "id": "c5_p4",
@@ -304,7 +304,7 @@ export const menuCategories = [
         "name": "Chicken Pepper Fatayer",
         "description": "Freshly baked soft and airy bun.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/chicken-pepper-fatayer.webp"
       },
       {
         "id": "c5_p7",
@@ -323,14 +323,14 @@ export const menuCategories = [
         "name": "Egg Roll",
         "description": "A hearty roll stuffed with delicious savory flavors.",
         "price": 49,
-        "image": ""
+        "image": "/images/products/egg-roll.webp"
       },
       {
         "id": "c6_p1",
         "name": "Paneer Roll",
         "description": "A hearty roll stuffed with delicious savory flavors.",
         "price": 49,
-        "image": ""
+        "image": "/images/products/paneer-roll.webp"
       },
       {
         "id": "c6_p2",
@@ -347,9 +347,9 @@ export const menuCategories = [
       {
         "id": "c7_p0",
         "name": "Belgium Chocolate Cup Cake",
-        "description": "A delightful and fluffy mini cake topped with creamy frosting.",
+        "description": "Decadent dark cocoa sponge crowned with a velvety swirl of Belgian chocolate ganache.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/belgium-chocolate-cupcake.webp"
       },
       {
         "id": "c7_p1",
@@ -366,16 +366,16 @@ export const menuCategories = [
       {
         "id": "c8_p0",
         "name": "Dark Chocolate Doughnut",
-        "description": "A sweet and soft doughnut covered in decadent glaze.",
+        "description": "Classic ring doughnut dipped in bittersweet dark chocolate glaze and chocolate crisps.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/dark-chocolate-doughnut.webp"
       },
       {
         "id": "c8_p1",
         "name": "Milk Chocolate Doughnut",
-        "description": "A sweet and soft doughnut covered in decadent glaze.",
+        "description": "Tender yeast doughnut coated with silky milk chocolate glaze and delicate sprinkles.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/milk-chocolate-doughnut.webp"
       }
     ]
   },
@@ -385,9 +385,9 @@ export const menuCategories = [
       {
         "id": "c9_p0",
         "name": "Classic Tres Leches",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Light vanilla sponge soaked in our signature three-milk bath, topped with whipped cloud cream.",
         "basePrice": 240,
-        "image": "",
+        "image": "/images/products/classic-tres-leches.webp",
         "options": [
           {
             "name": "Options",
@@ -403,9 +403,9 @@ export const menuCategories = [
       {
         "id": "c9_p1",
         "name": "Biscoff Tres Leches",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Spiced sponge drenched in Lotus Biscoff infused sweet milk and topped with crunchy caramelized biscuit.",
         "basePrice": 249,
-        "image": "",
+        "image": "/images/products/biscoff-tres-leches.webp",
         "options": [
           {
             "name": "Options",
@@ -421,9 +421,9 @@ export const menuCategories = [
       {
         "id": "c9_p2",
         "name": "Belgian Tres Leches",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Rich cocoa sponge soaked in decadent Belgian chocolate milk with dark chocolate shavings.",
         "basePrice": 269,
-        "image": "",
+        "image": "/images/products/belgian-tres-leches.webp",
         "options": [
           {
             "name": "Options",
@@ -439,9 +439,9 @@ export const menuCategories = [
       {
         "id": "c9_p3",
         "name": "Tiramisu Eggless",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Savoiardi soaked in strong espresso with airy eggless mascarpone mousse and Dutch cocoa dust.",
         "basePrice": 199,
-        "image": "",
+        "image": "/images/products/tiramisu-eggless.webp",
         "options": [
           {
             "name": "Options",
@@ -457,9 +457,9 @@ export const menuCategories = [
       {
         "id": "c9_p4",
         "name": "Death By Chocolate D.B.C.",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Layers of dark chocolate fudge cake, chocolate mousse, crunchy brownie crumble, and chocolate chips.",
         "basePrice": 249,
-        "image": "",
+        "image": "/images/products/death-by-chocolate-dbc.webp",
         "options": [
           {
             "name": "Options",
@@ -475,9 +475,9 @@ export const menuCategories = [
       {
         "id": "c9_p5",
         "name": "Butterly Original: Coffee Crunch",
-        "description": "A heavenly layered dessert served in a convenient tub.",
+        "description": "Signature Butterly creation: roasted coffee cream layered with crispy chocolate wafer crunch.",
         "basePrice": 249,
-        "image": "",
+        "image": "/images/products/coffee-crunch.webp",
         "options": [
           {
             "name": "Options",
@@ -507,6 +507,63 @@ export const menuCategories = [
             ]
           }
         ]
+      },
+      {
+        "id": "c9_p7",
+        "name": "Banana Pudding Eggless",
+        "description": "Silky banana cream layered with crushed vanilla wafers, fresh bananas, and warm caramel drizzle.",
+        "price": 220,
+        "basePrice": 220,
+        "image": "/images/products/banana-pudding-eggless.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "1 (Tub)",
+                "priceModifier": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c9_p8",
+        "name": "Coffee Tres Leches",
+        "description": "Espresso-infused sponge steeped in velvety sweetened triple milk, finished with coffee dust.",
+        "price": 249,
+        "basePrice": 249,
+        "image": "/images/products/coffee-tres-leches.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "1 (Tub)",
+                "priceModifier": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c9_p9",
+        "name": "Hazelnut Tres Leches",
+        "description": "Roasted hazelnut sponge drenched in nutty triple milk, decorated with chocolate swirl and chopped hazelnuts.",
+        "price": 269,
+        "basePrice": 269,
+        "image": "/images/products/hazelnut-tres-leches.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "1 (Tub)",
+                "priceModifier": 0
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -516,37 +573,44 @@ export const menuCategories = [
       {
         "id": "c10_p0",
         "name": "Biscoff Brownie",
-        "description": "A rich, fudgy, and intensely chocolatey brownie slice.",
+        "description": "Dense, fudgy dark chocolate brownie topped with creamy Lotus Biscoff spread and biscuit.",
         "price": 140,
-        "image": ""
+        "image": "/images/products/biscoff-brownie.webp"
       },
       {
         "id": "c10_p1",
         "name": "Hazelnut Brownie",
-        "description": "A rich, fudgy, and intensely chocolatey brownie slice.",
+        "description": "Rich chocolate fudge brownie infused with roasted hazelnuts and chocolate ganache swirl.",
         "price": 140,
-        "image": ""
+        "image": "/images/products/hazelnut-brownie.webp"
       },
       {
         "id": "c10_p2",
         "name": "Choco Fudge Brownie",
         "description": "A rich, fudgy, and intensely chocolatey brownie slice.",
         "price": 120,
-        "image": ""
+        "image": "/images/products/choco-fudge-brownie.webp"
       },
       {
         "id": "c10_p3",
         "name": "Walnut Brownie",
         "description": "A rich, fudgy, and intensely chocolatey brownie slice.",
         "price": 120,
-        "image": ""
+        "image": "/images/products/walnut-brownie.webp"
       },
       {
         "id": "c10_p4",
         "name": "Kunafa Brownie",
-        "description": "A rich, fudgy, and intensely chocolatey brownie slice.",
+        "description": "The ultimate fusion: chewy fudge brownie layered with crispy golden kunafa pastry and pistachio cream.",
         "price": 180,
-        "image": ""
+        "image": "/images/products/kunafa-brownie.webp"
+      },
+      {
+        "id": "c10_p5",
+        "name": "Sizzling Brownie with Ice Cream",
+        "description": "Fresh warm chocolate brownie served on a sizzling hot skillet with vanilla bean ice cream and molten fudge sauce.",
+        "price": 180,
+        "image": "/images/products/sizzling-brownie.webp"
       }
     ]
   },
@@ -725,7 +789,7 @@ export const menuCategories = [
         "name": "Blueberry Cheesecake (Baked)",
         "description": "A rich and creamy baked cheesecake with a delightful crust.",
         "price": 150,
-        "image": ""
+        "image": "/images/products/blueberry-cheesecake.webp"
       }
     ]
   },
@@ -744,21 +808,21 @@ export const menuCategories = [
         "name": "Chocolate Truffle Pastry",
         "description": "A decadent, multi-layered pastry slice perfect for celebrations.",
         "price": 99,
-        "image": ""
+        "image": "/images/products/choco-truffle-pastry.webp"
       },
       {
         "id": "c13_p2",
         "name": "Belgium Truffle Pastry",
         "description": "A decadent, multi-layered pastry slice perfect for celebrations.",
         "price": 150,
-        "image": ""
+        "image": "/images/truffle_cake_1785271864770.png"
       },
       {
         "id": "c13_p3",
         "name": "Russian Honey Cake",
         "description": "A decadent, multi-layered pastry slice perfect for celebrations.",
         "price": 150,
-        "image": ""
+        "image": "/images/products/russian-honey-cake.webp"
       },
       {
         "id": "c13_p4",
@@ -772,7 +836,7 @@ export const menuCategories = [
         "name": "Rasmalai Pastry",
         "description": "A decadent, multi-layered pastry slice perfect for celebrations.",
         "price": 150,
-        "image": ""
+        "image": "/images/products/rasmalai-pastry.webp"
       }
     ]
   },
@@ -784,21 +848,21 @@ export const menuCategories = [
         "name": "Chocolate Macaron",
         "description": "A delicate and colorful French almond macaron.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/chocolate-macaron.webp"
       },
       {
         "id": "c14_p1",
         "name": "Pista Macaron",
         "description": "A delicate and colorful French almond macaron.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/pista-macaron.webp"
       },
       {
         "id": "c14_p2",
         "name": "Blueberry Macaron",
         "description": "A delicate and colorful French almond macaron.",
         "price": 60,
-        "image": ""
+        "image": "/images/products/blueberry-macaron.webp"
       }
     ]
   },
@@ -900,7 +964,7 @@ export const menuCategories = [
         "name": "Mango",
         "description": "A tropical delight featuring fresh mangoes and soft sponge.",
         "basePrice": 425,
-        "image": "",
+        "image": "/images/products/mango-cake.webp",
         "options": [
           {
             "name": "Options",
@@ -1170,7 +1234,7 @@ export const menuCategories = [
         "name": "Chocolate Truffle",
         "description": "A rich and indulgent chocolate cake layered with premium flavors.",
         "basePrice": 525,
-        "image": "",
+        "image": "/images/truffle_cake_1785271864770.png",
         "options": [
           {
             "name": "Options",
@@ -1200,7 +1264,7 @@ export const menuCategories = [
         "name": "Belgium Truffle",
         "description": "A rich and indulgent chocolate cake layered with premium flavors.",
         "basePrice": 725,
-        "image": "",
+        "image": "/images/truffle_cake_1785271864770.png",
         "options": [
           {
             "name": "Options",
@@ -1320,7 +1384,7 @@ export const menuCategories = [
         "name": "Red Velvet",
         "description": "A striking red, incredibly moist cake with rich cream cheese frosting.",
         "basePrice": 525,
-        "image": "",
+        "image": "/images/products/red-velvet-cake.webp",
         "options": [
           {
             "name": "Options",
@@ -1350,7 +1414,7 @@ export const menuCategories = [
         "name": "Fresh Mango",
         "description": "A tropical delight featuring fresh mangoes and soft sponge.",
         "basePrice": 525,
-        "image": "",
+        "image": "/images/products/mango-cake.webp",
         "options": [
           {
             "name": "Options",
@@ -1370,6 +1434,130 @@ export const menuCategories = [
               {
                 "label": "Eggless - 1kg",
                 "priceModifier": 1075
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c15_p19",
+        "name": "Safari Animals Designer Cake",
+        "description": "Spectacular handcrafted celebration cake with edible safari animal figurines (giraffe, zebra, lion) and tropical foliage.",
+        "price": 1200,
+        "basePrice": 1200,
+        "image": "/images/products/animals-model-cake.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "Egg - 500g",
+                "priceModifier": 0
+              },
+              {
+                "label": "Eggless - 500g",
+                "priceModifier": 100
+              },
+              {
+                "label": "Egg - 1kg",
+                "priceModifier": 375
+              },
+              {
+                "label": "Eggless - 1kg",
+                "priceModifier": 475
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c15_p20",
+        "name": "Barnyard Farm Animals Cake",
+        "description": "Delightful birthday cake adorned with adorable fondant farm animals (cow, monkey, teddy, puppy) and balloons.",
+        "price": 1200,
+        "basePrice": 1200,
+        "image": "/images/products/farm-animals-model-cake.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "Egg - 500g",
+                "priceModifier": 0
+              },
+              {
+                "label": "Eggless - 500g",
+                "priceModifier": 100
+              },
+              {
+                "label": "Egg - 1kg",
+                "priceModifier": 375
+              },
+              {
+                "label": "Eggless - 1kg",
+                "priceModifier": 475
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c15_p21",
+        "name": "Pastel Rainbow Unicorn Cake",
+        "description": "Dreamy pastel rainbow celebration cake with golden unicorn horn, sleeping clouds, and colorful fondant hearts.",
+        "price": 1250,
+        "basePrice": 1250,
+        "image": "/images/products/unicorn-model-cake.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "Egg - 500g",
+                "priceModifier": 0
+              },
+              {
+                "label": "Eggless - 500g",
+                "priceModifier": 100
+              },
+              {
+                "label": "Egg - 1kg",
+                "priceModifier": 375
+              },
+              {
+                "label": "Eggless - 1kg",
+                "priceModifier": 475
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "c15_p22",
+        "name": "Frozen Olaf Winter Wonderland Cake",
+        "description": "Magical Frozen themed birthday cake featuring a sculpted 3D Olaf, frosted pine trees, and sparkling sugar snowflakes.",
+        "price": 1300,
+        "basePrice": 1300,
+        "image": "/images/products/olaf-model-cake.webp",
+        "options": [
+          {
+            "name": "Options",
+            "choices": [
+              {
+                "label": "Egg - 500g",
+                "priceModifier": 0
+              },
+              {
+                "label": "Eggless - 500g",
+                "priceModifier": 100
+              },
+              {
+                "label": "Egg - 1kg",
+                "priceModifier": 375
+              },
+              {
+                "label": "Eggless - 1kg",
+                "priceModifier": 475
               }
             ]
           }
